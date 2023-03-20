@@ -5,7 +5,7 @@
     <app-side-nav [sideNavStatus]="sideNavStatus" [ngClass]="{'app-side-nav-open': sideNavStatus}"></app-side-nav>
 
     <div class="display-area p-3" [ngClass]="{'display-area-shrink': sideNavStatus}">
-      <p class="fs-1 fw-bold fst-italic">Main Display Area</p>
+      <router-outlet></router-outlet>
     </div>
   </main>
 </div>
