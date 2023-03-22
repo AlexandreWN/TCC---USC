@@ -2,6 +2,18 @@
     display: flex;
     flex-direction: row;
     justify-content: end;
+    button{
+        background-color: #404040;
+        border-radius: 5px;
+        border: none;
+        height: 2em;
+        width: 9em;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin-right: 4em;
+    }
 }
 
 .itensRows{
@@ -12,4 +24,40 @@
 .rows{
     display: flex;
     flex-direction: column;
+    margin-left: 4em;
+    margin-right: 4em;
+    .title{
+        font-weight: bold;
+        font-size: 1.5em;
+        color: #fff;
+    }
+}
+
+.rows:nth-child(n + 2){
+    margin-top: 20px;
+}
+
+.rowContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.itemContainer{
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    p{
+        font-weight: 510;
+        text-align: center;
+        margin-top: 20px;
+        color: #fff;
+    }
+}
+
+.imgItem{
+    margin-top: 10px;
+    background-color: rgb(192, 192, 192);
+    width: 200px;
+    height: 150px;
 }
