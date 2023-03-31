@@ -14,9 +14,7 @@ export class InitialPageComponent {
 
   constructor(private readonly dialog: MatDialog){}
   openDialog(): void {
-    const dialogRef = this.dialog.open(LoginDialogComponent, {
-      data: {name: this.name, animal: this.animal},
-    });
+    const dialogRef = this.dialog.open(LoginDialogComponent);
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
