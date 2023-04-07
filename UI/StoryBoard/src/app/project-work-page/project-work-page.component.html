@@ -1,0 +1,71 @@
+<nav>
+    <div class="itensRows">
+        <div class="rows">
+            <p class="title">Nome do projeto</p>
+        </div>
+        <div class="buttonTop">
+            <mat-form-field class="selector">
+                <mat-label>Selecione a sprint</mat-label>
+                <mat-select value="1" (selectionChange)="onOptionSelected($event.value)">
+                    <mat-option value="1">1</mat-option>
+                    <mat-option value="2">2</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <button><a>Adicinar Projeto</a></button>
+        </div>
+    </div>
+    <div class="content">
+        <mat-expansion-panel hideToggle class="panel">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Exemplo de Story
+                </mat-panel-title>
+                <mat-icon>
+                    arrow_drop_down
+                </mat-icon>
+            </mat-expansion-panel-header>
+
+            <div class="example-container">
+                <h2>To do</h2>
+              
+                <div
+                  cdkDropList
+                  #todoList="cdkDropList"
+                  [cdkDropListData]="todo"
+                  [cdkDropListConnectedTo]="[inProgessList, doneList, todoList]"
+                  class="example-list"
+                  (cdkDropListDropped)="drop($event)">
+                  <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+                </div>
+            </div>
+
+            <div class="example-container">
+                <h2>In progress</h2>
+              
+                <div
+                  cdkDropList
+                  #inProgessList="cdkDropList"
+                  [cdkDropListData]="inProgess"
+                  [cdkDropListConnectedTo]="[inProgessList, doneList, todoList]"
+                  class="example-list"
+                  (cdkDropListDropped)="drop($event)">
+                  <div class="example-box" *ngFor="let item of inProgess" cdkDrag>{{item}}</div>
+                </div>
+            </div>
+              
+            <div class="example-container">
+                <h2>Done</h2>
+              
+                <div
+                  cdkDropList
+                  #doneList="cdkDropList"
+                  [cdkDropListData]="done"
+                  [cdkDropListConnectedTo]="[inProgessList, doneList, todoList]"
+                  class="example-list"
+                  (cdkDropListDropped)="drop($event)">
+                  <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+                </div>
+            </div>
+        </mat-expansion-panel>
+    </div>
+</nav>

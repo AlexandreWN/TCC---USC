@@ -12,6 +12,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { LoginDialogComponent } from './presentation-page/components/login-dialog/login-dialog';
 import { FormsModule } from '@angular/forms';
+import { ProjectWorkPageComponent } from './project-work-page/project-work-page.component';
+import {MatSelectModule} from '@angular/material/select';
+import {MatExpansionModule} from '@angular/material/expansion';
+import {MatIconModule} from '@angular/material/icon';
+import {DragDropModule} from '@angular/cdk/drag-drop';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     SideNavComponent,
     InitialPageComponent,
     PresentationPageComponent,
-    LoginDialogComponent
+    LoginDialogComponent,
+    ProjectWorkPageComponent
   ],
   imports: [
     BrowserModule,
@@ -27,12 +34,20 @@ import { FormsModule } from '@angular/forms';
     MatDialogModule,
     BrowserAnimationsModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    MatSelectModule,
+    MatExpansionModule,
+    MatIconModule,
+    DragDropModule
   ],
   exports: [
     MatDialogModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    MatSelectModule,
+    MatExpansionModule,
+    MatIconModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]
