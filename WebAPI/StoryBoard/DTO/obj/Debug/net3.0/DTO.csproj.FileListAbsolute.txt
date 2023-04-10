@@ -1,0 +1,5 @@
+C:\Users\alexa\Desktop\Repositorios\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net3.0\DTO.csproj.AssemblyReference.cache
+C:\Users\alexa\Desktop\Repositorios\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net3.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alexa\Desktop\Repositorios\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net3.0\DTO.AssemblyInfoInputs.cache
+C:\Users\alexa\Desktop\Repositorios\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net3.0\DTO.AssemblyInfo.cs
+C:\Users\alexa\Desktop\Repositorios\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net3.0\DTO.csproj.CoreCompileInputs.cache
