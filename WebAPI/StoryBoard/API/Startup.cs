@@ -29,7 +29,7 @@ public class Startup
         using (var scope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
         {
             var dbContext = scope.ServiceProvider.GetService<Context>();
-            dbContext.Database.EnsureDeleted();
+            //dbContext.Database.EnsureDeleted();
             dbContext.Database.EnsureCreated();
         }
 
