@@ -17,6 +17,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatIconModule} from '@angular/material/icon';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import { StoryDialogComponent } from './project-work-page/components/story-dialog/story-dialog.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {DragDropModule} from '@angular/cdk/drag-drop';
     InitialPageComponent,
     PresentationPageComponent,
     LoginDialogComponent,
-    ProjectWorkPageComponent
+    ProjectWorkPageComponent,
+    StoryDialogComponent
   ],
   imports: [
     BrowserModule,
