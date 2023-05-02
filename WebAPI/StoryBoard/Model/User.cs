@@ -113,29 +113,30 @@ public class User
         return this;
     }
 
-    public static User UpdateUser(UserDto dto)
+    public async static Task<User> UpdateUserAsync(UserDto dto)
     {
-        var context = new Context();
+        using var context = new Context();
 
-        var userDb = context.User
+        var transaction = await context.Database.BeginTransactionAsync();
+        try
+        {
+            var userDb = context.User
             .First(x => x.Id == dto.Id);
 
-        if (dto.Name != userDb.Name)
-        {
-            userDb.Name = dto.Name;
-        }
+            if (dto.Name != userDb.Name) userDb.Name = dto.Name;
+            if (dto.Active != userDb.Active) userDb.Active = dto.Active;
+            if (dto.Adm != userDb.Adm) userDb.Adm = dto.Adm;
 
-        if (dto.Active != userDb.Active)
-        {
-            userDb.Active = dto.Active;
-        }
+            await context.SaveChangesAsync();
+            await transaction.CommitAsync();
 
-        if (dto.Adm != userDb.Adm)
-        {
-            userDb.Adm = dto.Adm;
+            return userDb;
         }
-
-        return userDb;
+        catch (Exception)
+        {
+            await transaction.RollbackAsync();
+            throw;
+        }
     }
 }
 

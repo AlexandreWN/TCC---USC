@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using DTO;
-using System.Reflection;
 
 namespace Controllers;
 
@@ -55,8 +54,7 @@ public class UserController : ControllerBase
     public async Task<IActionResult> updateUser([FromBody] UserDto dto)
     {
         var user = await Model.User
-            .UpdateUser(dto)
-            .SaveAsync();
+            .UpdateUserAsync(dto);
 
         return Ok(user);
     }
