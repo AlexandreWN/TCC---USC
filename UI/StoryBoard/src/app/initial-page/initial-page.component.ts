@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { LoginDialogComponent } from '../presentation-page/components/login-dialog/login-dialog';
 import { AxiosEndpoint } from '../utils/query-services';
-import { ProjectDto } from '../utils/project-dto/project-dto';
 import { Router } from '@angular/router';
-
+import { AddProjectDialogComponent } from './components/add-project-dialog/add-project-dialog';
 @Component({
   selector: 'app-initial-page',
   templateUrl: './initial-page.component.html',
@@ -36,7 +34,7 @@ export class InitialPageComponent implements OnInit{
   }
 
   openDialog(): void {
-    const dialogRef = this.dialog.open(LoginDialogComponent);
+    const dialogRef = this.dialog.open(AddProjectDialogComponent);
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');

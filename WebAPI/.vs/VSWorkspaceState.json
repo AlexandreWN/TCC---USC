@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\StoryBoard",
+    "\\StoryBoard\\API",
+    "\\StoryBoard\\API\\bin",
+    "\\StoryBoard\\DTO",
+    "\\StoryBoard\\Model"
+  ],
+  "SelectedNode": "\\StoryBoard\\DTO\\DashDto.cs",
+  "PreviewInSolutionExplorer": false
+}

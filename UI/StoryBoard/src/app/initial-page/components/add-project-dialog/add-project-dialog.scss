@@ -11,19 +11,18 @@
     margin-top: 2em;
 }
 
-.Email{
+.Name{
     display: flex;
     flex-direction: row;
     justify-content: left;
 }
 
-.Password{
+.Url{
     display: flex;
     flex-direction: row;
     justify-content: left;
     margin-top: 2em;
 }
-
 
 .buttonContainer{
     display: flex;
@@ -31,23 +30,9 @@
     justify-content: left;
     margin-left: 1.2em;
     padding-top: 2em;
-    padding-bottom: 2em;
+    padding-bottom: 3em;
 }
 
-.Login-singUp{
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    margin-top: 1em;
-    margin-left: 2em;
-    color: rgb(0, 0, 0);
-        .link_up{  
-            border: 0;
-            margin-left: 5px;
-            background-color: rgb(255, 255, 255);
-            color:rgb(126, 126, 126);
-        }
-}
 
 .button{
     border: 0;
@@ -56,14 +41,4 @@
     height: 40px;
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
-}
-
-.ForgotPassword{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    color: rgb(0, 0, 0);
-    padding-top: 2em;
-    padding-bottom: 2em;
-
 }

@@ -1,6 +1,5 @@
 import { Component, Inject } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA, MatDialog } from '@angular/material/dialog';
-import { RegisterDialogComponent } from '../register-dialog/register-dialog';
 
 export interface DialogData {
   animal: string;
@@ -8,16 +7,16 @@ export interface DialogData {
 }
 
 @Component({
-  selector: 'app-presentation-page',
-  templateUrl: './login-dialog.html',
-  styleUrls: ['./login-dialog.scss']
+  selector: 'app-initial-page',
+  templateUrl: './add-project-dialog.html',
+  styleUrls: ['./add-project-dialog.scss']
 })
 
-export class LoginDialogComponent {
+export class AddProjectDialogComponent {
   animal!: string;
   name!: string;
   constructor(
-    public dialogRef: MatDialogRef<LoginDialogComponent>,
+    public dialogRef: MatDialogRef<AddProjectDialogComponent>,
     @Inject(MAT_DIALOG_DATA) public data: DialogData, private readonly dialog: MatDialog
   ) {}
 
@@ -25,11 +24,10 @@ export class LoginDialogComponent {
     this.dialogRef.close();
   }
 
-  openDialogRegister(): void {
-    const dialogRef2 = this.dialog.open(RegisterDialogComponent);
-    this.dialogRef.close();
+  openDialogAddProject(): void {
+    const dialogRef = this.dialog.open(AddProjectDialogComponent);
 
-    dialogRef2.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
       this.animal = result;
     });
