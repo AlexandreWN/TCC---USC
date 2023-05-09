@@ -22,6 +22,11 @@ public class Startup
             options.UseSqlServer(configuration["DefaultConnection"]));
 
         services.AddSwaggerGen();
+
+        services.AddCors(p => p.AddPolicy("corsapp", builder =>
+        {
+            builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
+        }));
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -37,6 +42,7 @@ public class Startup
         app.UseSwaggerUI();
 
         app.UseRouting();
+        app.UseCors("corsapp");
 
         app.UseEndpoints(endpoints =>
         {

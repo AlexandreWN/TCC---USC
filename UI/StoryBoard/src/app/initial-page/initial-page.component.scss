@@ -38,15 +38,18 @@
 }
 
 .rowContent{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: auto;
 }
 
 .itemContainer{
     display: flex;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 5px;
+    padding: 0.5em;
+    width: 215px;
+    height: 200px;
     p{
         font-weight: 510;
         text-align: center;
@@ -55,9 +58,24 @@
     }
 }
 
+.itemContainer:hover{
+    cursor: pointer;
+    background-color: rgb(77, 77, 77);
+}
+
 .imgItem{
     margin-top: 10px;
     background-color: rgb(192, 192, 192);
     width: 200px;
     height: 150px;
+
+    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    img{
+        max-height: 150px;
+        min-height: 150px;
+        min-width: 200px;
+    }
 }

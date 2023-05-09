@@ -79,6 +79,7 @@ public class UserProject
 
         var userProjects = await context.UserProject
             .Where(filter)
+            .Include(p => p.Project)
             .ToListAsync();
 
         return userProjects;

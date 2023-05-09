@@ -29,10 +29,19 @@ public class ProjectController : ControllerBase
     }
 
     [HttpGet]
+    [Route("getProjectLikeId/{id}")]
+    public async Task<IActionResult> getProjectByName(int id)
+    {
+        var project = await Model.Project.GetProjectById(id);
+
+        return Ok(project);
+    }
+
+    [HttpGet]
     [Route("getProjectsLikeName/{name}")]
     public async Task<IActionResult> getProjectByName(string name)
     {
-        var projects = await Model.Project.GetProjectLikeName(c =>
+        var projects = await Model.Project.GetProjectLike(c =>
             c.Name.Contains(name));
 
         return Ok(projects);

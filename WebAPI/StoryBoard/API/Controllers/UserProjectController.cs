@@ -9,43 +9,52 @@ public class UserProjectProjectController : ControllerBase
 {
     [HttpPost]
     [Route("register")]
-    public async Task<IActionResult> registerUsuario([FromBody] UserProjectDto dto)
+    public async Task<IActionResult> registerUserProject([FromBody] UserProjectDto dto)
     {
-        var user = await Model.UserProject
+        var userProject = await Model.UserProject
             .Create(dto)
             .SaveAsync();
 
-        return Ok(user.Id);
+        return Ok(userProject.Id);
     }
 
     [HttpGet]
     [Route("getUserProjects")]
     public async Task<IActionResult> getAllUserProjects()
     {
-        var users = await Model.UserProject
+        var userProject = await Model.UserProject
             .GetUserProjects();
 
-        return Ok(users);
+        return Ok(userProject);
     }
 
     [HttpGet]
     [Route("getUserProjectsLikeUserName/{name}")]
     public async Task<IActionResult> getUserProjectByName(string name)
     {
-        var users = await Model.UserProject.GetUserProjectLike(c =>
+        var userProject = await Model.UserProject.GetUserProjectLike(c =>
             c.User.Name.Contains(name));
 
-        return Ok(users);
+        return Ok(userProject);
     }
 
+    [HttpGet]
+    [Route("getUserProjectsLikeUserId/{id}/{userType}")]
+    public async Task<IActionResult> getUserProjectByUserId(int id, string userType)
+    {
+        var userProject = await Model.UserProject.GetUserProjectLike(c =>
+            c.IdUser == id && c.UserType == userType);
+
+        return Ok(userProject);
+    }
 
     [HttpPut]
     [Route("updateUserProject")]
     public async Task<IActionResult> updateUserProject([FromBody] UserProjectDto dto)
     {
-        var user = await Model.UserProject
+        var userProject = await Model.UserProject
             .UpdateUserProjectAsync(dto);
 
-        return Ok(user);
+        return Ok(userProject);
     }
 }

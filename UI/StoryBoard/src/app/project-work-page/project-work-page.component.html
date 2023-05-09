@@ -1,17 +1,17 @@
 <nav>
     <div class="itensRows">
         <div class="rows">
-            <p class="title">Nome do projeto</p>
+            <p class="title">{{(queryCommandProject | async)?.name}}</p>
         </div>
         <div class="buttonTop">
             <mat-form-field class="selector">
                 <mat-label>Selecione a sprint</mat-label>
                 <mat-select value="1" (selectionChange)="onOptionSelected($event.value)">
                     <mat-option value="1">1</mat-option>
-                    <mat-option value="2">2</mat-option>
+                    <mat-option value="2">Adicionar Sprint</mat-option>
                 </mat-select>
             </mat-form-field>
-            <button (click)="openDialog()"><a>Adiocinar Projeto</a></button>
+            <button (click)="openDialog()"><a>Adiocinar Story</a></button>
         </div>
     </div>
     <div class="content">

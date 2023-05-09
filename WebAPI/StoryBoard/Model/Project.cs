@@ -75,7 +75,7 @@ public class Project
         return projects;
     }
 
-    public static async Task<List<Project>> GetProjectLikeName(Expression<Func<Project, bool>> filter)
+    public static async Task<List<Project>> GetProjectLike(Expression<Func<Project, bool>> filter)
     {
         using var context = new Context();
 

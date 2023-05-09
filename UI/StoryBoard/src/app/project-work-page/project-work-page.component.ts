@@ -2,6 +2,8 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { StoryDialogComponent } from './components/story-dialog/story-dialog.component';
+import { ActivatedRoute } from '@angular/router';
+import { AxiosEndpoint } from '../utils/query-services';
 
 @Component({
   selector: 'app-project-work-page',
@@ -13,7 +15,21 @@ export class ProjectWorkPageComponent {
   inProgess : Array<string> = [];
   done : Array<string> = [];
 
-  constructor(private readonly dialog: MatDialog){
+  projectId!: number;
+
+  queryCommandProject!: Promise<any>;
+
+  constructor(
+    private readonly dialog: MatDialog
+    , private route: ActivatedRoute
+    ){
+      this.route.queryParams.subscribe(params => {
+        this.projectId = params['id'];
+        this.queryCommandProject = AxiosEndpoint.project.getById(this.projectId)
+      });
+  }
+
+  ngOnInit() {
     
   }
 
