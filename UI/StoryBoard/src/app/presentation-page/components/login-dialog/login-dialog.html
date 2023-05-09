@@ -1,12 +1,23 @@
-<h1 mat-dialog-title>hi {{data.name}}</h1>
-<div mat-dialog-content>
+  <h1 mat-dialog-title class="title">LOGIN</h1>
 
-  <h1>LOGIN</h1>
+  <div mat-dialog-content class="container">
 
-  <p>Email</p>
-  <p>Senha</p>
+      <p class="Email"><mat-label>Email</mat-label></p>
+      <input matInput id="Email">
+    
+      <p class="Password"><mat-label>Password</mat-label></p>
+      <input matInput id="Password">
 
-</div>
-<div mat-dialog-actions>
-  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Submit</button>
-</div>
+  </div>
+
+  <div mat-dialog-actions class="buttonContainer">
+    <button mat-button cdkFocusInitial class="button">Submit</button>
+  </div>
+
+  <div>
+    <p class = "Login-singUp">don't have an account?<button class="link_up"(click)="openDialogRegister()"><a>Sing Up</a></button></p>
+  </div>
+
+  <div>
+    <p><a href="" class="ForgotPassword">Forgot Password?</a></p>
+  </div>

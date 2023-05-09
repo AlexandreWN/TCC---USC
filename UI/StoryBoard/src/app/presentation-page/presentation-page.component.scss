@@ -1,10 +1,105 @@
 * {
-    margin: 100;
-    padding: 100;
+    margin: 10px;
+    padding: 10px;
     font-family: Helvetica;
+}
+
+.top{   
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.title{  
+    display: flex;
+    float: left;
+    text-align: left;
+    font-weight: bold;
+    font-size: 2.0em; 
+    color: black;
+    margin-top: -30px;
+    margin-left: -20px;
     
 }
 
-body{
-    padding-bottom: 100px;
+.Btns_in_up{
+    display: flex;
+    float: right;
+    margin-top: -65px;
+    margin-right: -30px;
+    
+    button{
+        background-color: #000000;
+        border-radius: 5px;
+        border: none;
+        height: 3em;
+        width: 9em;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        color: rgb(255, 255, 255);
+        
+    }
+}
+
+.sobre{
+    padding-top: 150px;
+    font-weight: bold; 
+    color: black;
+}
+
+.text_sobre{
+    display: table;
+    width: 500px;
+    text-align: justify;
+}
+
+.subtitle{
+    margin-bottom: -20px;
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+    padding-top: 4em;   
+}
+.subtitle_right{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-bottom: -20px;
+    margin-right: 285px;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+    padding-top: 4em; 
+}
+
+.container_right{
+    display: flex;
+    flex-direction:row-reverse;
+    padding-bottom: 10em;
+}
+
+.container{
+   
+   display: flex;
+   flex-direction: row;
+   padding-bottom: 10em;
+}
+
+.img{
+    margin: -10px;
+    background-color: #797878;
+    border-radius: 5px;
+    border: none;
+    height: 400px;
+    width: 400px;
+    padding-top: -2em;
+}
+
+.text{
+    margin-top: -20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    text-align: justify;
+    width: 500px;   
 }

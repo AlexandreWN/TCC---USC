@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { LoginDialogComponent } from '../presentation-page/components/login-dialog/login-dialog';
+import { AddProjectDialogComponent } from './components/add-project-dialog/add-project-dialog';
 
 @Component({
   selector: 'app-initial-page',
@@ -14,7 +14,7 @@ export class InitialPageComponent {
 
   constructor(private readonly dialog: MatDialog){}
   openDialog(): void {
-    const dialogRef = this.dialog.open(LoginDialogComponent);
+    const dialogRef = this.dialog.open(AddProjectDialogComponent);
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');

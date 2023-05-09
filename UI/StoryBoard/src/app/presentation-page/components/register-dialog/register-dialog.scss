@@ -4,7 +4,7 @@
     width: 400px;
 }
 
-.title{
+.tittle{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -24,29 +24,20 @@
     margin-top: 2em;
 }
 
+.RepeatPassword{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-top: 2em;
+}
 
 .buttonContainer{
     display: flex;
     flex-direction: row;
     justify-content: left;
     margin-left: 1.2em;
-    padding-top: 2em;
-    padding-bottom: 2em;
-}
-
-.Login-singUp{
-    display: flex;
-    flex-direction: row;
-    justify-content: left;
-    margin-top: 1em;
-    margin-left: 2em;
-    color: rgb(0, 0, 0);
-        .link_up{  
-            border: 0;
-            margin-left: 5px;
-            background-color: rgb(255, 255, 255);
-            color:rgb(126, 126, 126);
-        }
+    padding-top: 3em;
+    padding-bottom: 2.5em;
 }
 
 .button{
@@ -56,14 +47,5 @@
     height: 40px;
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
-}
-
-.ForgotPassword{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    color: rgb(0, 0, 0);
-    padding-top: 2em;
-    padding-bottom: 2em;
-
+    
 }
