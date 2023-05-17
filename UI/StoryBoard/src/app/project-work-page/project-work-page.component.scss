@@ -65,8 +65,23 @@
     margin-right: 4em;
     margin-left: 4em;
     flex-direction: column;
+
+    .panel {
+      width: 100%;
+      background-color: #f8f9fa;
+    }
+
+    .panel:nth-child(n + 2) {
+      margin-top: 10px;
+    }
 }
 
-
+.example-container {
+    width: 30%;
+    max-width: 100%;
+    margin: 0 25px 25px 0;
+    display: inline-block;
+    vertical-align: top;
+}
   
   
