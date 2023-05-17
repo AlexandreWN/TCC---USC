@@ -5,7 +5,7 @@ namespace Controllers;
 
 [ApiController]
 [Route("[controller]")]
-public class UserProjectProjectController : ControllerBase
+public class UserProjectController : ControllerBase
 {
     [HttpPost]
     [Route("register")]

@@ -21,6 +21,7 @@ import { MatExpansionModule} from '@angular/material/expansion';
 import { MatIconModule} from '@angular/material/icon';
 import { DragDropModule} from '@angular/cdk/drag-drop';
 import { AddProjectDialogComponent } from './initial-page/components/add-project-dialog/add-project-dialog';
+import { StoryListComponent } from './project-work-page/components/story-list/story-list.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { AddProjectDialogComponent } from './initial-page/components/add-project
     LoginDialogComponent,
     RegisterDialogComponent,
     AddProjectDialogComponent,
-    ProjectWorkPageComponent
+    ProjectWorkPageComponent,
+    StoryListComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +46,8 @@ import { AddProjectDialogComponent } from './initial-page/components/add-project
     MatSelectModule,
     MatExpansionModule,
     MatIconModule,
-    DragDropModule
+    DragDropModule,
+    ReactiveFormsModule 
   ],
   exports: [
     MatDialogModule,
@@ -53,7 +56,8 @@ import { AddProjectDialogComponent } from './initial-page/components/add-project
     MatSelectModule,
     MatExpansionModule,
     MatIconModule,
-    DragDropModule
+    DragDropModule,
+    ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

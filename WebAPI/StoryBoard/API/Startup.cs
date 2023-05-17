@@ -35,7 +35,7 @@ public class Startup
         {
             var dbContext = scope.ServiceProvider.GetService<Context>();
             //dbContext.Database.EnsureDeleted();
-            dbContext.Database.EnsureCreated();
+            //dbContext.Database.EnsureCreated();
         }
 
         app.UseSwagger();

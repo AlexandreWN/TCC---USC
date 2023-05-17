@@ -15,57 +15,6 @@
         </div>
     </div>
     <div class="content">
-        <mat-expansion-panel hideToggle class="panel">
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    Exemplo de Story
-                </mat-panel-title>
-                <mat-icon>
-                    arrow_drop_down
-                </mat-icon>
-            </mat-expansion-panel-header>
-
-            <div class="example-container">
-                <h2>To do</h2>
-              
-                <div
-                  cdkDropList
-                  #todoList="cdkDropList"
-                  [cdkDropListData]="todo"
-                  [cdkDropListConnectedTo]="[inProgessList, doneList, todoList]"
-                  class="example-list"
-                  (cdkDropListDropped)="drop($event)">
-                  <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
-                </div>
-            </div>
-
-            <div class="example-container">
-                <h2>In progress</h2>
-              
-                <div
-                  cdkDropList
-                  #inProgessList="cdkDropList"
-                  [cdkDropListData]="inProgess"
-                  [cdkDropListConnectedTo]="[inProgessList, doneList, todoList]"
-                  class="example-list"
-                  (cdkDropListDropped)="drop($event)">
-                  <div class="example-box" *ngFor="let item of inProgess" cdkDrag>{{item}}</div>
-                </div>
-            </div>
-              
-            <div class="example-container">
-                <h2>Done</h2>
-              
-                <div
-                  cdkDropList
-                  #doneList="cdkDropList"
-                  [cdkDropListData]="done"
-                  [cdkDropListConnectedTo]="[inProgessList, doneList, todoList]"
-                  class="example-list"
-                  (cdkDropListDropped)="drop($event)">
-                  <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
-                </div>
-            </div>
-        </mat-expansion-panel>
+        <app-story-list></app-story-list>
     </div>
 </nav>

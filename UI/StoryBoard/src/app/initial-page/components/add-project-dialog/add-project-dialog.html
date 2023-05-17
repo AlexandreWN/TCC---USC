@@ -1,14 +1,21 @@
   <h1 mat-dialog-title class="title">ADICIONAR PROJETO</h1>
-  <div mat-dialog-content class="container">
-    
-      <p class="Name"><mat-label>Name</mat-label></p>
-      <input matInput id="Name">
+  <div mat-dialog-content class="container"  [formGroup]="mainForm">
+    <p class="Name">
+      <mat-label>Name</mat-label>
+    </p>
+    <input matInput #name formControlName="name" id="Name">
 
-      <p class="Url"><mat-label>Imagem Url</mat-label></p>
-      <input matInput id="ImagemUrl">
-    
+    <p class="Url">
+      <mat-label>Description</mat-label>
+    </p>
+    <input matInput #description formControlName="description" id="Description">
+
+    <p class="Url">
+      <mat-label>Imagem Url</mat-label>
+    </p>
+    <input matInput #urlImage formControlName="urlImage" id="ImagemUrl">
   </div>
 
   <div mat-dialog-actions class="buttonContainer">
-    <button mat-button cdkFocusInitial class="button">Submit</button>
+    <button [disabled]="!mainForm.valid" [ngClass]="{ 'disabled-style': !this.mainForm.valid }" [disabled]="!this.mainForm.valid" mat-button cdkFocusInitial class="button" (click)="submitRegister()">Submit</button>
   </div>

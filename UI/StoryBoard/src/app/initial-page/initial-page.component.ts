@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { AxiosEndpoint } from '../utils/query-services';
 import { Router } from '@angular/router';
 import { AddProjectDialogComponent } from './components/add-project-dialog/add-project-dialog';
+import { UserDto } from '../dtos/user-dto/user-dto';
 @Component({
   selector: 'app-initial-page',
   templateUrl: './initial-page.component.html',
@@ -12,6 +13,7 @@ export class InitialPageComponent implements OnInit{
 
   animal!: string;
   name!: string;
+  user!: UserDto;
 
   queryCommandProjects!: Promise<any>;
   queryCommandTeamProjects!: Promise<any>;
@@ -25,8 +27,17 @@ export class InitialPageComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.queryCommandProjects = AxiosEndpoint.userProject.getAllByUserId(1, "adm")
-    this.queryCommandTeamProjects = AxiosEndpoint.userProject.getAllByUserId(1, "team")
+    this.user = JSON.parse(localStorage.getItem('user') ?? "");
+    if(this.user !== undefined){
+      console.log(this.user.id)
+      this.queryCommandProjects = AxiosEndpoint.userProject.getAllByUserId(this.user.id, "adm")
+      this.queryCommandTeamProjects = AxiosEndpoint.userProject.getAllByUserId(this.user.id, "team")
+    }
+  }
+
+  reset(){
+    this.queryCommandProjects = AxiosEndpoint.userProject.getAllByUserId(this.user.id, "adm")
+    this.queryCommandTeamProjects = AxiosEndpoint.userProject.getAllByUserId(this.user.id, "team")
   }
 
   GoToProject(id: number){
@@ -39,6 +50,7 @@ export class InitialPageComponent implements OnInit{
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
       this.animal = result;
+      this.reset();
     });
   }
 }

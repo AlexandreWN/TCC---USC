@@ -67,3 +67,9 @@
     padding-bottom: 2em;
 
 }
+
+.disabled-style {
+    opacity: 0.1;
+    background-color: rgb(126, 126, 126);
+    cursor: not-allowed;
+}

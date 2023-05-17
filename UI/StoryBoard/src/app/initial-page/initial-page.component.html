@@ -15,7 +15,7 @@
                     </div>
                 </ng-container>
                 <ng-container *ngIf="(queryCommandProjects | async)?.length === 0">
-                    <div class="itemContainer">
+                    <div class="itemContainer" (click)="openDialog()">
                         <div class="imgItem">
                             <img src="https://media.istockphoto.com/id/688550958/pt/vetorial/black-plus-sign-positive-symbol.jpg?s=612x612&w=0&k=20&c=3pivfI1RA8Z1TfEeDC7puMSh5ow5J5bW8XiIDfJMKIw=">
                         </div>

@@ -1,16 +1,19 @@
 <h1 mat-dialog-title class="tittle">REGISTER</h1>
-<div mat-dialog-content class="container">
+<div mat-dialog-content class="container" [formGroup]="mainForm">
   
-    <mat-label class="Email">Email</mat-label>
-    <input matInput id="Email">
-  
-    <mat-label class="Password">Password</mat-label>
-    <input matInput id="Password">
- 
-    <mat-label class="RepeatPassword">Repeat Password</mat-label>
-    <input matInput id="RepeatPassword">
+  <mat-label class="Email">Email</mat-label>
+  <input matInput #login formControlName="login" id="Email">
+
+  <mat-label class="Name">Name</mat-label>
+  <input matInput #name formControlName="name" id="Name">
+
+  <mat-label class="Password">Password</mat-label>
+  <input type="password" matInput #password formControlName="password" id="Password">
+
+  <mat-label class="RepeatPassword">Repeat Password</mat-label>
+  <input type="password" matInput #repeatpassword formControlName="repeatpassword" id="RepeatPassword">
   
 </div>
 <div mat-dialog-actions class="buttonContainer">
-  <button mat-button cdkFocusInitial class="button">Submit</button>
+  <button mat-button cdkFocusInitial class="button" (click)="submitRegister()">Submit</button>
 </div>

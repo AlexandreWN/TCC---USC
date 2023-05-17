@@ -1,17 +1,19 @@
   <h1 mat-dialog-title class="title">LOGIN</h1>
 
-  <div mat-dialog-content class="container">
-
-      <p class="Email"><mat-label>Email</mat-label></p>
-      <input matInput id="Email">
-    
-      <p class="Password"><mat-label>Password</mat-label></p>
-      <input matInput id="Password">
-
+  <div mat-dialog-content class="container" [formGroup]="mainForm">
+    <p class="Email">
+      <mat-label>Email</mat-label>
+    </p>
+    <input matInput #login formControlName="login" id="Email">
+ 
+    <p class="Password">
+      <mat-label>Password</mat-label>
+    </p>
+    <input matInput type="password" #password formControlName="password" id="Password">
   </div>
 
   <div mat-dialog-actions class="buttonContainer">
-    <button mat-button cdkFocusInitial class="button">Submit</button>
+    <button mat-button cdkFocusInitial class="button" [ngClass]="{ 'disabled-style': !this.mainForm.valid }" [disabled]="!this.mainForm.valid" (click)="submitLogin()">Submit</button>
   </div>
 
   <div>
