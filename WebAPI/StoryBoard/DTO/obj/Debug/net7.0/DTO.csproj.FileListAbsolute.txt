@@ -22,3 +22,27 @@ C:\Users\Aluno\Desktop\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\DTO.dll
 C:\Users\Aluno\Desktop\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\refint\DTO.dll
 C:\Users\Aluno\Desktop\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\DTO.pdb
 C:\Users\Aluno\Desktop\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\ref\DTO.dll
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\DTO\bin\Debug\net7.0\DTO.deps.json
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\DTO\bin\Debug\net7.0\DTO.dll
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\DTO\bin\Debug\net7.0\DTO.pdb
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\DTO.csproj.AssemblyReference.cache
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\DTO.AssemblyInfoInputs.cache
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\DTO.AssemblyInfo.cs
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\DTO.csproj.CoreCompileInputs.cache
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\DTO.dll
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\refint\DTO.dll
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\DTO.pdb
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\ref\DTO.dll
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\DTO\bin\Debug\net7.0\DTO.deps.json
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\DTO\bin\Debug\net7.0\DTO.dll
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\DTO\bin\Debug\net7.0\DTO.pdb
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\DTO.csproj.AssemblyReference.cache
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\DTO.AssemblyInfoInputs.cache
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\DTO.AssemblyInfo.cs
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\DTO.csproj.CoreCompileInputs.cache
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\DTO.dll
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\refint\DTO.dll
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\DTO.pdb
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\ref\DTO.dll

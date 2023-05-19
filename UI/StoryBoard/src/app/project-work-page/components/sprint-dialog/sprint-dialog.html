@@ -1,0 +1,11 @@
+<h1 mat-dialog-title class="tittle">ADICIONAR SPRINT</h1>
+<div mat-dialog-content class="container" [formGroup]="mainForm">
+  
+  <mat-label class="Name">Sprint Name</mat-label>
+  <input matInput #name formControlName="name" id="Name">
+  
+</div>
+<div mat-dialog-actions class="buttonContainer">
+  <button mat-button cdkFocusInitial class="button" (click)="submitRegister()">Submit</button>
+  <button mat-button cdkFocusInitial class="buttonCancel" (click)="submitRegister()">Cancel</button>
+</div>

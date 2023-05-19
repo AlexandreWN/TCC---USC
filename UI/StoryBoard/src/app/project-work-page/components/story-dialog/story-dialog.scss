@@ -1,0 +1,64 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.tittle{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 2em;
+}
+
+.Name{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-top: 2em;
+}
+
+.Task{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-top: 2em;
+}
+
+.buttonContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-left: 1.2em;
+    padding-top: 3em;
+    padding-bottom: 2.5em;
+}
+
+.button{
+    border: 0;
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+    justify-content: right;
+    margin-right: 13.5em;
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    
+}
+
+.buttonCancel{
+    border: 0;
+    border-radius: 5px;
+    width: 80px;
+    height: 40px;
+    
+    color: rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
+    
+}
+
+.disabled-style {
+    opacity: 0.1;
+    background-color: rgb(126, 126, 126);
+    cursor: not-allowed;
+}

@@ -28,3 +28,33 @@ C:\Users\Aluno\Desktop\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\Model.dl
 C:\Users\Aluno\Desktop\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\refint\Model.dll
 C:\Users\Aluno\Desktop\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\Model.pdb
 C:\Users\Aluno\Desktop\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\ref\Model.dll
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\Model\bin\Debug\net7.0\Model.deps.json
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\Model\bin\Debug\net7.0\Model.dll
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\Model\bin\Debug\net7.0\Model.pdb
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\Model\bin\Debug\net7.0\DTO.dll
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\Model\bin\Debug\net7.0\DTO.pdb
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\Model.csproj.AssemblyReference.cache
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\Model.AssemblyInfoInputs.cache
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\Model.AssemblyInfo.cs
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\Model.csproj.CoreCompileInputs.cache
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\Model.csproj.CopyComplete
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\Model.dll
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\refint\Model.dll
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\Model.pdb
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\Back&Front\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\ref\Model.dll
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\Model\bin\Debug\net7.0\Model.deps.json
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\Model\bin\Debug\net7.0\Model.dll
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\Model\bin\Debug\net7.0\Model.pdb
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\Model\bin\Debug\net7.0\DTO.dll
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\Model\bin\Debug\net7.0\DTO.pdb
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\Model.csproj.AssemblyReference.cache
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\Model.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\Model.AssemblyInfoInputs.cache
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\Model.AssemblyInfo.cs
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\Model.csproj.CoreCompileInputs.cache
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\Model.csproj.CopyComplete
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\Model.dll
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\refint\Model.dll
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\Model.pdb
+C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\ref\Model.dll

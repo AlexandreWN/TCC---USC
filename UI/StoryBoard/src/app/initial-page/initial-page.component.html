@@ -29,7 +29,7 @@
             <p class="title">Seus projetos em time</p>
             <div class="rowContent" *ngIf="(queryCommandTeamProjects | async)?.length !== 0">
 
-                <div class="itemContainer" *ngFor="let proj of queryCommandTeamProjects | async">
+                <div class="itemContainer" *ngFor="let proj of queryCommandTeamProjects | async"(click)="GoToProject(proj.project.id)">
                     <div class="imgItem">
                         <img src="{{proj.project.urlImage}}">
                     </div>

@@ -1,7 +1,8 @@
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
 import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { StoryDialogComponent } from './components/story-dialog/story-dialog.component';
+import { SprintDialogComponent } from './components/sprint-dialog/sprint-dialog';
+import { StoryDialogComponent } from './components/story-dialog/story-dialog';
 import { ActivatedRoute } from '@angular/router';
 import { AxiosEndpoint } from '../utils/query-services';
 
@@ -33,6 +34,19 @@ export class ProjectWorkPageComponent {
     
   }
 
+  animal!: string;
+  name!: string;
+
+
+  openDialogSprint(): void {
+    const dialogRef = this.dialog.open(SprintDialogComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+      this.animal = result;
+    });
+  }
+
   drop(event: CdkDragDrop<string[]>) {
     if (event.previousContainer === event.container) {
       moveItemInArray(event.container.data, event.previousIndex, event.currentIndex);
@@ -50,7 +64,7 @@ export class ProjectWorkPageComponent {
     
   }
 
-  openDialog(): void {
+  openDialogStory(): void {
     const dialogRef = this.dialog.open(StoryDialogComponent);
 
     dialogRef.afterClosed().subscribe(result => {

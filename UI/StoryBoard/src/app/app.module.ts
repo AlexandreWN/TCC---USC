@@ -22,6 +22,8 @@ import { MatIconModule} from '@angular/material/icon';
 import { DragDropModule} from '@angular/cdk/drag-drop';
 import { AddProjectDialogComponent } from './initial-page/components/add-project-dialog/add-project-dialog';
 import { StoryListComponent } from './project-work-page/components/story-list/story-list.component';
+import { SprintDialogComponent } from './project-work-page/components/sprint-dialog/sprint-dialog';
+import { StoryDialogComponent } from './project-work-page/components/story-dialog/story-dialog';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { StoryListComponent } from './project-work-page/components/story-list/st
     RegisterDialogComponent,
     AddProjectDialogComponent,
     ProjectWorkPageComponent,
-    StoryListComponent
+    StoryListComponent,
+    SprintDialogComponent, 
+    StoryDialogComponent
   ],
   imports: [
     BrowserModule,
