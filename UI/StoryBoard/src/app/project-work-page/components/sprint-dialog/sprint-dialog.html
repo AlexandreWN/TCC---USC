@@ -3,9 +3,18 @@
   
   <mat-label class="Name">Sprint Name</mat-label>
   <input matInput #name formControlName="name" id="Name">
+
+  <mat-label class="Name">Description</mat-label>
+  <input matInput type="text" #description formControlName="description" id="description">
+
+  <mat-label class="Name">Initial Date</mat-label>
+  <input matInput type="date" #initionDate formControlName="initionDate" id="initionDate">
+
+  <mat-label class="Name">EndDate</mat-label>
+  <input matInput type="date" #endDate formControlName="endDate" id="endDate">
   
 </div>
 <div mat-dialog-actions class="buttonContainer">
-  <button mat-button cdkFocusInitial class="button" (click)="submitRegister()">Submit</button>
-  <button mat-button cdkFocusInitial class="buttonCancel" (click)="submitRegister()">Cancel</button>
+  <button mat-button cdkFocusInitial class="button" (click)="onNoClick()">Cancel</button>
+  <button mat-button [ngClass]="{ 'disabled-style': !this.mainForm.valid }" [disabled]="!this.mainForm.valid" cdkFocusInitial class="buttonSubmit" (click)="submitRegister()">Submit</button>
 </div>

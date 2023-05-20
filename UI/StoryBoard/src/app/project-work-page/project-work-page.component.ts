@@ -17,8 +17,10 @@ export class ProjectWorkPageComponent {
   done : Array<string> = [];
 
   projectId!: number;
+  sprintId!:number;
 
   queryCommandProject!: Promise<any>;
+  queryCommandSprint!: Promise<any>;
 
   constructor(
     private readonly dialog: MatDialog
@@ -27,6 +29,7 @@ export class ProjectWorkPageComponent {
       this.route.queryParams.subscribe(params => {
         this.projectId = params['id'];
         this.queryCommandProject = AxiosEndpoint.project.getById(this.projectId)
+        this.queryCommandSprint = AxiosEndpoint.sprint.getSprintLikeProjectId(this.projectId);
       });
   }
 
@@ -34,16 +37,16 @@ export class ProjectWorkPageComponent {
     
   }
 
-  animal!: string;
   name!: string;
 
 
   openDialogSprint(): void {
-    const dialogRef = this.dialog.open(SprintDialogComponent);
+    const dialogRef = this.dialog.open(SprintDialogComponent, 
+      {data: this.projectId}
+    );
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      this.animal = result;
+      this.queryCommandSprint = AxiosEndpoint.sprint.getSprintLikeProjectId(this.projectId);
     });
   }
 
@@ -61,7 +64,7 @@ export class ProjectWorkPageComponent {
   }
 
   onOptionSelected(option: number) {
-    
+    localStorage.setItem('sprintId', JSON.stringify(option))
   }
 
   openDialogStory(): void {

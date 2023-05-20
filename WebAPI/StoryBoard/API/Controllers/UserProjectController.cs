@@ -9,7 +9,7 @@ public class UserProjectController : ControllerBase
 {
     [HttpPost]
     [Route("register")]
-    public async Task<IActionResult> registerUserProject([FromBody] UserProjectDto dto)
+    public async Task<IActionResult> RegisterUserProject([FromBody] UserProjectDto dto)
     {
         var userProject = await Model.UserProject
             .Create(dto)
@@ -20,7 +20,7 @@ public class UserProjectController : ControllerBase
 
     [HttpGet]
     [Route("getUserProjects")]
-    public async Task<IActionResult> getAllUserProjects()
+    public async Task<IActionResult> GetAllUserProjects()
     {
         var userProject = await Model.UserProject
             .GetUserProjects();
@@ -30,7 +30,7 @@ public class UserProjectController : ControllerBase
 
     [HttpGet]
     [Route("getUserProjectsLikeUserName/{name}")]
-    public async Task<IActionResult> getUserProjectByName(string name)
+    public async Task<IActionResult> GetUserProjectsLikeUserName(string name)
     {
         var userProject = await Model.UserProject.GetUserProjectLike(c =>
             c.User.Name.Contains(name));
@@ -40,7 +40,7 @@ public class UserProjectController : ControllerBase
 
     [HttpGet]
     [Route("getUserProjectsLikeUserId/{id}/{userType}")]
-    public async Task<IActionResult> getUserProjectByUserId(int id, string userType)
+    public async Task<IActionResult> GetUserProjectByUserId(int id, string userType)
     {
         var userProject = await Model.UserProject.GetUserProjectLike(c =>
             c.IdUser == id && c.UserType == userType);
@@ -50,7 +50,7 @@ public class UserProjectController : ControllerBase
 
     [HttpPut]
     [Route("updateUserProject")]
-    public async Task<IActionResult> updateUserProject([FromBody] UserProjectDto dto)
+    public async Task<IActionResult> UpdateUserProject([FromBody] UserProjectDto dto)
     {
         var userProject = await Model.UserProject
             .UpdateUserProjectAsync(dto);

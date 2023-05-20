@@ -9,7 +9,7 @@ public class UserController : ControllerBase
 {
     [HttpPost]
     [Route("register")]
-    public async Task<IActionResult> registerUsuario([FromBody] UserDto dto)
+    public async Task<IActionResult> RegisterUsuario([FromBody] UserDto dto)
     {
         var user = await Model.User
             .Create(dto)
@@ -20,7 +20,7 @@ public class UserController : ControllerBase
 
     [HttpPost]
     [Route("login")]
-    public async Task<IActionResult> getUsuario([FromBody] LoginDto dto)
+    public async Task<IActionResult> GetUsuario([FromBody] LoginDto dto)
     {
         var usuario = await Model.User
             .GetUserAsync(u => u.Login == dto.Login && u.Password == dto.Password);
@@ -30,7 +30,7 @@ public class UserController : ControllerBase
 
     [HttpGet]
     [Route("getUsers")]
-    public async Task<IActionResult> getAllUsers()
+    public async Task<IActionResult> GetAllUsers()
     {
         var users = await Model.User
             .GetUsers();
@@ -40,7 +40,7 @@ public class UserController : ControllerBase
 
     [HttpGet]
     [Route("getUsersLikeName/{name}")]
-    public async Task<IActionResult> getUserByName(string name)
+    public async Task<IActionResult> GetUserByName(string name)
     {
         var users = await Model.User.GetUserLikeName(c =>
             c.Name.Contains(name));
@@ -51,7 +51,7 @@ public class UserController : ControllerBase
 
     [HttpPut]
     [Route("updateUser")]
-    public async Task<IActionResult> updateUser([FromBody] UserDto dto)
+    public async Task<IActionResult> UpdateUser([FromBody] UserDto dto)
     {
         var user = await Model.User
             .UpdateUserAsync(dto);

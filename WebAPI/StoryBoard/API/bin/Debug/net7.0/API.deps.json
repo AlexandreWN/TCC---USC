@@ -11,6 +11,7 @@
           "DTO": "1.0.0",
           "EntityFramework": "6.4.4",
           "Microsoft.AspNetCore.OpenApi": "7.0.4",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.4",
           "Model": "1.0.0",
           "Swashbuckle.AspNetCore": "6.5.0"
         },
@@ -741,7 +742,14 @@
           }
         }
       },
-      "System.Diagnostics.DiagnosticSource/7.0.1": {},
+      "System.Diagnostics.DiagnosticSource/7.0.1": {
+        "runtime": {
+          "lib/net7.0/System.Diagnostics.DiagnosticSource.dll": {
+            "assemblyVersion": "7.0.0.0",
+            "fileVersion": "7.0.323.6910"
+          }
+        }
+      },
       "System.Diagnostics.EventLog/7.0.0": {},
       "System.Drawing.Common/5.0.0": {
         "dependencies": {
@@ -948,6 +956,10 @@
         }
       },
       "DTO/1.0.0": {
+        "dependencies": {
+          "EntityFramework": "6.4.4",
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.4"
+        },
         "runtime": {
           "DTO.dll": {}
         }
@@ -955,6 +967,7 @@
       "Model/1.0.0": {
         "dependencies": {
           "DTO": "1.0.0",
+          "EntityFramework": "6.4.4",
           "Microsoft.AspNetCore.Hosting": "2.2.7",
           "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
           "Microsoft.EntityFrameworkCore": "7.0.4",

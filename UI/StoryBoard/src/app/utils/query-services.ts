@@ -2,6 +2,8 @@ import axios from 'axios';
 import { UserDto } from '../dtos/user-dto/user-dto';
 import { ProjectDto } from '../dtos/project-dto/project-dto';
 import { UserProjectDto } from '../dtos/user-project-dto/user-project-dto';
+import { SprintDto } from '../dtos/sprint-dto/sprint-dto';
+import { StoryDto } from '../dtos/story-dto/story-dto';
 
 export const MainApiBaseRoute ='https://localhost:7147';
 
@@ -15,10 +17,18 @@ export const EndpointUrl = {
     getById: (id: number) => `${MainApiBaseRoute}/Project/getProjectLikeId/${id}`,
     register: () => `${MainApiBaseRoute}/Project/register`,
   },
+  sprint: {
+    register: () => `${MainApiBaseRoute}/Sprint/register`,
+    getSprintLikeProjectId: (id:  number) =>  `${MainApiBaseRoute}/Sprint/getSprintLikeProjectId/${id}`
+  },
+  story: {
+    register: () => `${MainApiBaseRoute}/Story/register`,
+    getStoryBySprintId: (id: number) => `${MainApiBaseRoute}/Story/getStoryBySprintId/${id}`
+  },
   user: {
     login: () => `${MainApiBaseRoute}/User/login`,
     register: () => `${MainApiBaseRoute}/User/register`,
-  }
+  },
 }
 
 export const AxiosEndpoint = {
@@ -51,6 +61,40 @@ export const AxiosEndpoint = {
         description: project.description
       };
       let response = await axios.post(EndpointUrl.project.register(), requestBody);
+      return response.data;
+    }
+  },
+  sprint: {
+    getSprintLikeProjectId:async (id: number): Promise<Array<any>> => {
+      let response = await axios.get(EndpointUrl.sprint.getSprintLikeProjectId(id));
+      return response.data;
+    },
+    register:async (sprint: SprintDto) => {
+      const requestBody = {
+        name : sprint.name,
+        description : sprint.description,
+        creationDate : sprint.creationDate,
+        initionDate : sprint.initionDate,
+        endDate : sprint.endDate,
+        idProject: sprint.idProject
+      };
+      let response = await axios.post(EndpointUrl.sprint.register(), requestBody);
+      return response.data;
+    }
+  },
+  story: {
+    getSprintLikeProjectId:async (id: number): Promise<Array<any>> => {
+      let response = await axios.get(EndpointUrl.story.getStoryBySprintId(id));
+      return response.data;
+    },
+    register:async (story: StoryDto) => {
+      const requestBody = {
+        name : story.name,
+        description : story.description,
+        creationDate : story.creationDate,
+        idSprint: story.idSprint
+      };
+      let response = await axios.post(EndpointUrl.story.register(), requestBody);
       return response.data;
     }
   },

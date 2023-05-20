@@ -9,7 +9,7 @@ public class ProjectController : ControllerBase
 {
     [HttpPost]
     [Route("register")]
-    public async Task<IActionResult> registerProject([FromBody] ProjectDto dto)
+    public async Task<IActionResult> RegisterProject([FromBody] ProjectDto dto)
     {
         var project = await Model.Project
             .Create(dto)
@@ -20,7 +20,7 @@ public class ProjectController : ControllerBase
 
     [HttpGet]
     [Route("getProjects")]
-    public async Task<IActionResult> getAllProjects()
+    public async Task<IActionResult> GetAllProjects()
     {
         var projects = await Model.Project
             .GetProjects();
@@ -30,7 +30,7 @@ public class ProjectController : ControllerBase
 
     [HttpGet]
     [Route("getProjectLikeId/{id}")]
-    public async Task<IActionResult> getProjectByName(int id)
+    public async Task<IActionResult> GetProjectByName(int id)
     {
         var project = await Model.Project.GetProjectById(id);
 
@@ -39,7 +39,7 @@ public class ProjectController : ControllerBase
 
     [HttpGet]
     [Route("getProjectsLikeName/{name}")]
-    public async Task<IActionResult> getProjectByName(string name)
+    public async Task<IActionResult> GetProjectByName(string name)
     {
         var projects = await Model.Project.GetProjectLike(c =>
             c.Name.Contains(name));
@@ -50,7 +50,7 @@ public class ProjectController : ControllerBase
 
     [HttpPut]
     [Route("updateProject")]
-    public async Task<IActionResult> updateProject([FromBody] ProjectDto dto)
+    public async Task<IActionResult> UpdateProject([FromBody] ProjectDto dto)
     {
         var project = await Model.Project
             .UpdateProjectAsync(dto);

@@ -46,3 +46,5 @@ C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard
 C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\refint\DTO.dll
 C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\DTO.pdb
 C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\ref\DTO.dll
+C:\Users\alexa\Desktop\Repositorios\TCC-USC\WebAPI\StoryBoard\DTO\bin\Debug\net7.0\DTO.runtimeconfig.json
+C:\Users\alexa\Desktop\Repositorios\TCC-USC\WebAPI\StoryBoard\DTO\obj\Debug\net7.0\DTO.genruntimeconfig.cache

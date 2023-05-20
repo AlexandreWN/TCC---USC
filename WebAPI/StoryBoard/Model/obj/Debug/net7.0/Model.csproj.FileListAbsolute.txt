@@ -58,3 +58,5 @@ C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard
 C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\refint\Model.dll
 C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\Model.pdb
 C:\Users\wyll_\OneDrive\Ambiente de Trabalho\BackFront\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\ref\Model.dll
+C:\Users\alexa\Desktop\Repositorios\TCC-USC\WebAPI\StoryBoard\Model\bin\Debug\net7.0\Model.runtimeconfig.json
+C:\Users\alexa\Desktop\Repositorios\TCC-USC\WebAPI\StoryBoard\Model\obj\Debug\net7.0\Model.genruntimeconfig.cache

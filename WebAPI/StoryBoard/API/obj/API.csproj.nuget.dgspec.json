@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\BackFront\\TCC-USC\\WebAPI\\StoryBoard\\API\\API.csproj": {}
+    "C:\\Users\\alexa\\Desktop\\Repositorios\\TCC-USC\\WebAPI\\StoryBoard\\API\\API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\BackFront\\TCC-USC\\WebAPI\\StoryBoard\\API\\API.csproj": {
+    "C:\\Users\\alexa\\Desktop\\Repositorios\\TCC-USC\\WebAPI\\StoryBoard\\API\\API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\BackFront\\TCC-USC\\WebAPI\\StoryBoard\\API\\API.csproj",
+        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\Repositorios\\TCC-USC\\WebAPI\\StoryBoard\\API\\API.csproj",
         "projectName": "API",
-        "projectPath": "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\BackFront\\TCC-USC\\WebAPI\\StoryBoard\\API\\API.csproj",
-        "packagesPath": "C:\\Users\\wyll_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\BackFront\\TCC-USC\\WebAPI\\StoryBoard\\API\\obj\\",
+        "projectPath": "C:\\Users\\alexa\\Desktop\\Repositorios\\TCC-USC\\WebAPI\\StoryBoard\\API\\API.csproj",
+        "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexa\\Desktop\\Repositorios\\TCC-USC\\WebAPI\\StoryBoard\\API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\wyll_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,11 +28,11 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\BackFront\\TCC-USC\\WebAPI\\StoryBoard\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\BackFront\\TCC-USC\\WebAPI\\StoryBoard\\DTO\\DTO.csproj"
+              "C:\\Users\\alexa\\Desktop\\Repositorios\\TCC-USC\\WebAPI\\StoryBoard\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\alexa\\Desktop\\Repositorios\\TCC-USC\\WebAPI\\StoryBoard\\DTO\\DTO.csproj"
               },
-              "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\BackFront\\TCC-USC\\WebAPI\\StoryBoard\\Model\\Model.csproj": {
-                "projectPath": "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\BackFront\\TCC-USC\\WebAPI\\StoryBoard\\Model\\Model.csproj"
+              "C:\\Users\\alexa\\Desktop\\Repositorios\\TCC-USC\\WebAPI\\StoryBoard\\Model\\Model.csproj": {
+                "projectPath": "C:\\Users\\alexa\\Desktop\\Repositorios\\TCC-USC\\WebAPI\\StoryBoard\\Model\\Model.csproj"
               }
             }
           }
@@ -52,6 +52,10 @@
               "version": "[6.4.4, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[7.0.4, )"
             },
@@ -79,21 +83,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\BackFront\\TCC-USC\\WebAPI\\StoryBoard\\DTO\\DTO.csproj": {
+    "C:\\Users\\alexa\\Desktop\\Repositorios\\TCC-USC\\WebAPI\\StoryBoard\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\BackFront\\TCC-USC\\WebAPI\\StoryBoard\\DTO\\DTO.csproj",
+        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\Repositorios\\TCC-USC\\WebAPI\\StoryBoard\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\BackFront\\TCC-USC\\WebAPI\\StoryBoard\\DTO\\DTO.csproj",
-        "packagesPath": "C:\\Users\\wyll_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\BackFront\\TCC-USC\\WebAPI\\StoryBoard\\DTO\\obj\\",
+        "projectPath": "C:\\Users\\alexa\\Desktop\\Repositorios\\TCC-USC\\WebAPI\\StoryBoard\\DTO\\DTO.csproj",
+        "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexa\\Desktop\\Repositorios\\TCC-USC\\WebAPI\\StoryBoard\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\wyll_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -118,6 +122,16 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -134,21 +148,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\BackFront\\TCC-USC\\WebAPI\\StoryBoard\\Model\\Model.csproj": {
+    "C:\\Users\\alexa\\Desktop\\Repositorios\\TCC-USC\\WebAPI\\StoryBoard\\Model\\Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\BackFront\\TCC-USC\\WebAPI\\StoryBoard\\Model\\Model.csproj",
+        "projectUniqueName": "C:\\Users\\alexa\\Desktop\\Repositorios\\TCC-USC\\WebAPI\\StoryBoard\\Model\\Model.csproj",
         "projectName": "Model",
-        "projectPath": "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\BackFront\\TCC-USC\\WebAPI\\StoryBoard\\Model\\Model.csproj",
-        "packagesPath": "C:\\Users\\wyll_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\BackFront\\TCC-USC\\WebAPI\\StoryBoard\\Model\\obj\\",
+        "projectPath": "C:\\Users\\alexa\\Desktop\\Repositorios\\TCC-USC\\WebAPI\\StoryBoard\\Model\\Model.csproj",
+        "packagesPath": "C:\\Users\\alexa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\alexa\\Desktop\\Repositorios\\TCC-USC\\WebAPI\\StoryBoard\\Model\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\wyll_\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\alexa\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -162,8 +176,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\BackFront\\TCC-USC\\WebAPI\\StoryBoard\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\BackFront\\TCC-USC\\WebAPI\\StoryBoard\\DTO\\DTO.csproj"
+              "C:\\Users\\alexa\\Desktop\\Repositorios\\TCC-USC\\WebAPI\\StoryBoard\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\alexa\\Desktop\\Repositorios\\TCC-USC\\WebAPI\\StoryBoard\\DTO\\DTO.csproj"
               }
             }
           }
@@ -178,6 +192,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "EntityFramework": {
+              "target": "Package",
+              "version": "[6.4.4, )"
+            },
             "Microsoft.AspNetCore.Hosting": {
               "target": "Package",
               "version": "[2.2.7, )"
@@ -219,7 +237,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

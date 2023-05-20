@@ -65,7 +65,7 @@ export class LoginDialogComponent implements OnInit{
         this._router.navigate(['initial-page'])
       }
     }).catch(error => {
-      alert("Login ou senha invalido")
+      alert(error)
     });
   }
 }

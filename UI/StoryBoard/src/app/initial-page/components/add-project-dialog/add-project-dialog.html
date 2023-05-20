@@ -17,5 +17,5 @@
   </div>
 
   <div mat-dialog-actions class="buttonContainer">
-    <button [disabled]="!mainForm.valid" [ngClass]="{ 'disabled-style': !this.mainForm.valid }" [disabled]="!this.mainForm.valid" mat-button cdkFocusInitial class="button" (click)="submitRegister()">Submit</button>
+    <button [ngClass]="{ 'disabled-style': !this.mainForm.valid }" [disabled]="!this.mainForm.valid" mat-button cdkFocusInitial class="button" (click)="submitRegister()">Submit</button>
   </div>

@@ -23,7 +23,7 @@ export class StoryDialogComponent implements OnInit{
 
   constructor(
     public dialogRef: MatDialogRef<StoryDialogComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: DialogData,
+    @Inject(MAT_DIALOG_DATA) public data: any,
   ) {}
 
   ngOnInit(): void {
@@ -36,31 +36,31 @@ export class StoryDialogComponent implements OnInit{
 
   createFormGroup(){
     this.mainForm.addControl("name", new FormControl("", [Validators.required]));
-    this.mainForm.addControl("login", new FormControl("", [Validators.required]));
-    this.mainForm.addControl("password", new FormControl("",  [Validators.required]));
-    this.mainForm.addControl("repeatpassword", new FormControl("",  [Validators.required]));
+    this.mainForm.addControl("description", new FormControl("", [Validators.required]));
+    this.mainForm.addControl("creationDate", new FormControl(new Date));
+    this.mainForm.addControl("idSprint", new FormControl(this.data));
   }
 
   submitRegister(){
     console.log(this.mainForm)
-    if(this.mainForm.value.password === this.mainForm.value.repeatpassword){
-      this.user = UserDto.createFromFormValues(this.mainForm.value)
+    // if(this.mainForm.value.password === this.mainForm.value.repeatpassword){
+    //   this.user = UserDto.createFromFormValues(this.mainForm.value)
    
-      this.queryCommand = AxiosEndpoint.user.register(this.user)
+    //   this.queryCommand = AxiosEndpoint.user.register(this.user)
       
-      this.queryCommand.then(result => {
-        if(result && result.length !== 0) {
-          this.dialogRef.close();
-          localStorage.setItem('user', JSON.stringify(result))
-          alert("Usuario registrado com sucesso!")
-        }
-      }).catch(error => {
-        alert("Login ou senha invalido")
-      });
-    }
-    else{
-      alert("As senhas devem ser iguais")
-    }
+    //   this.queryCommand.then(result => {
+    //     if(result && result.length !== 0) {
+    //       this.dialogRef.close();
+    //       localStorage.setItem('user', JSON.stringify(result))
+    //       alert("Usuario registrado com sucesso!")
+    //     }
+    //   }).catch(error => {
+    //     alert("Login ou senha invalido")
+    //   });
+    // }
+    // else{
+    //   alert("As senhas devem ser iguais")
+    // }
   }
 
 }

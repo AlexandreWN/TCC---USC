@@ -4,11 +4,11 @@
   <mat-label class="Name">Name</mat-label>
   <input matInput #name formControlName="name" id="Name">
 
-  <mat-label class="Task">Task</mat-label>
-  <input matInput #name formControlName="name" id="Name">
+  <mat-label class="Task">Description</mat-label>
+  <input matInput #description formControlName="description" id="description">
   
 </div>
 <div mat-dialog-actions class="buttonContainer">
-  <button mat-button cdkFocusInitial class="button" (click)="submitRegister()">Submit</button>
-  <button mat-button cdkFocusInitial class="buttonCancel" (click)="submitRegister()">Cancel</button>
+  <button mat-button cdkFocusInitial class="button" (click)="onNoClick()">Cancel</button>
+  <button mat-button [ngClass]="{ 'disabled-style': !this.mainForm.valid }" [disabled]="!this.mainForm.valid" cdkFocusInitial class="buttonSubmit" (click)="submitRegister()">Submit</button>
 </div>

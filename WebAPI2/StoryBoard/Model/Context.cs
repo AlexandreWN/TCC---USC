@@ -13,20 +13,9 @@ namespace Model
         public DbSet<Story> Story { get; set; }
         public DbSet<Task> Task { get; set; }
 
-        public Context() : base()
-        {
-        }
-
-        public Context(DbContextOptions<Context> options, IConfiguration configuration) : base(options)
-        {
-            Context.Configuration = configuration;
-        }
-
-        public static IConfiguration Configuration { get; private set; }
-
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+            optionsBuilder.UseSqlServer("Server=tcp:storyboard.database.windows.net,1433;Initial Catalog=StoryBoard;Persist Security Info=False;User ID=Story.Board;Password=Pokemonavg123*;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
