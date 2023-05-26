@@ -10,7 +10,7 @@ export class StoryDto {
         story.name = formValues.name;
         story.description = formValues.description;
         story.creationDate = formValues.creationDate;
-        story.idSprint = formValues.idProject;
+        story.idSprint = formValues.idSprint;
         return story;
     }
 }

@@ -16,7 +16,7 @@
             <button (click)="openDialogStory()"><a>Adicionar Story</a></button>
         </div>
     </div>
-    <div class="content">
-        <app-story-list></app-story-list>
+    <div class="content" *ngFor="let story of queryCommandStory | async">
+        <app-story-list [Entity]="this.story"></app-story-list>
     </div>
 </nav>

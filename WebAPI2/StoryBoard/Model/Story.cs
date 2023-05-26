@@ -12,7 +12,7 @@ public class Story
     public DateTime CreationDate { get; private set; }
     public int IdSprint { get; private set; }
 
-    public Sprint Sprint { get; private set; } = default!;
+    public Sprint? Sprint { get; private set; } = default!;
 
     public Story()
     {

@@ -21,6 +21,7 @@ export class ProjectWorkPageComponent {
 
   queryCommandProject!: Promise<any>;
   queryCommandSprint!: Promise<any>;
+  queryCommandStory!: Promise<any>;
 
   constructor(
     private readonly dialog: MatDialog
@@ -65,13 +66,15 @@ export class ProjectWorkPageComponent {
 
   onOptionSelected(option: number) {
     localStorage.setItem('sprintId', JSON.stringify(option))
+    this.sprintId = option;
+    this.queryCommandStory = AxiosEndpoint.story.getStoryBySprintId(option)
   }
 
   openDialogStory(): void {
-    const dialogRef = this.dialog.open(StoryDialogComponent);
+    const dialogRef = this.dialog.open(StoryDialogComponent, {data: this.sprintId});
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      this.queryCommandStory = AxiosEndpoint.story.getStoryBySprintId(this.sprintId)
     });
   }
 }

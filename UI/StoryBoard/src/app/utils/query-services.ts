@@ -5,7 +5,7 @@ import { UserProjectDto } from '../dtos/user-project-dto/user-project-dto';
 import { SprintDto } from '../dtos/sprint-dto/sprint-dto';
 import { StoryDto } from '../dtos/story-dto/story-dto';
 
-export const MainApiBaseRoute ='https://localhost:7147';
+export const MainApiBaseRoute ='https://localhost:7086';
 
 export const EndpointUrl = {
   userProject: {
@@ -83,7 +83,7 @@ export const AxiosEndpoint = {
     }
   },
   story: {
-    getSprintLikeProjectId:async (id: number): Promise<Array<any>> => {
+    getStoryBySprintId:async (id: number): Promise<Array<any>> => {
       let response = await axios.get(EndpointUrl.story.getStoryBySprintId(id));
       return response.data;
     },

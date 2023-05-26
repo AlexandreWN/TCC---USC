@@ -1,6 +1,7 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { StoryDto } from 'src/app/dtos/story-dto/story-dto';
 import { UserDto } from 'src/app/dtos/user-dto/user-dto';
 import { AxiosEndpoint } from 'src/app/utils/query-services';
 
@@ -17,9 +18,11 @@ export interface DialogData {
 export class StoryDialogComponent implements OnInit{
   mainForm: FormGroup = new FormGroup({})
   
-  queryCommand!: Promise<any>;
+  submitCommand!: Promise<any>;
 
   user!: UserDto;
+  sprintId!: number;
+  story!: StoryDto;
 
   constructor(
     public dialogRef: MatDialogRef<StoryDialogComponent>,
@@ -42,25 +45,18 @@ export class StoryDialogComponent implements OnInit{
   }
 
   submitRegister(){
-    console.log(this.mainForm)
-    // if(this.mainForm.value.password === this.mainForm.value.repeatpassword){
-    //   this.user = UserDto.createFromFormValues(this.mainForm.value)
-   
-    //   this.queryCommand = AxiosEndpoint.user.register(this.user)
-      
-    //   this.queryCommand.then(result => {
-    //     if(result && result.length !== 0) {
-    //       this.dialogRef.close();
-    //       localStorage.setItem('user', JSON.stringify(result))
-    //       alert("Usuario registrado com sucesso!")
-    //     }
-    //   }).catch(error => {
-    //     alert("Login ou senha invalido")
-    //   });
-    // }
-    // else{
-    //   alert("As senhas devem ser iguais")
-    // }
-  }
+    if(this.sprintId !== null){
+      this.story = StoryDto.createFromFormValues(this.mainForm.value)
+      this.submitCommand = AxiosEndpoint.story.register(this.story);
 
+      this.submitCommand.then(result => {
+        if(result && result.length !== 0) {
+          this.dialogRef.close();
+          alert("Story cadastrado com sucesso")
+        }
+      }).catch(error => {
+        alert("Erro ao cadastrar Story "+error)
+      });
+    }
+  }
 }

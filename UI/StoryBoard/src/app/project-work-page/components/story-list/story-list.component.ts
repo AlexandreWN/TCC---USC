@@ -1,7 +1,8 @@
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ActivatedRoute } from '@angular/router';
+import { StoryDto } from 'src/app/dtos/story-dto/story-dto';
 import { AxiosEndpoint } from 'src/app/utils/query-services';
 
 @Component({
@@ -10,6 +11,8 @@ import { AxiosEndpoint } from 'src/app/utils/query-services';
   styleUrls: ['./story-list.component.scss']
 })
 export class StoryListComponent {
+  @Input() Entity!: StoryDto
+
   todo : Array<string> = ['Get to work', 'Pick up groceries', 'Go home', 'Fall asleep'];
   inProgess : Array<string> = [];
   done : Array<string> = [];
@@ -29,7 +32,7 @@ export class StoryListComponent {
   }
 
   ngOnInit() {
-    
+    console.log(this.Entity)
   }
 
   drop(event: CdkDragDrop<string[]>) {
