@@ -42,7 +42,6 @@ export class TaskDialogComponent implements OnInit{
     this.mainForm.addControl("name", new FormControl("", [Validators.required]));
     this.mainForm.addControl("description", new FormControl("", [Validators.required]));
     this.mainForm.addControl("creationDate", new FormControl(new Date));
-    this.mainForm.addControl("initionDate", new FormControl("", [Validators.required]));
     this.mainForm.addControl("endDate", new FormControl("", [Validators.required]));
     this.mainForm.addControl("durationTime", new FormControl("", [Validators.required]));
     this.mainForm.addControl("status", new FormControl("", [Validators.required]));

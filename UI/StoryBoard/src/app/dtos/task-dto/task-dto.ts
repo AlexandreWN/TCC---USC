@@ -3,7 +3,6 @@ export class TasktDto {
     name : string = "";
     description : string = "";
     creationDate : Date = new Date;
-    initionDate : Date = new Date;
     endDate : Date = new Date;
     DurationTime : number = 0;
     Status : string = "";
@@ -14,7 +13,6 @@ export class TasktDto {
         task.name = formValues.name;
         task.description = formValues.description;
         task.creationDate = formValues.creationDate;
-        task.initionDate = formValues.initionDate;
         task.endDate = formValues.endDate;
         task.DurationTime = formValues.DurationTime;
         task.Status = formValues.Status;

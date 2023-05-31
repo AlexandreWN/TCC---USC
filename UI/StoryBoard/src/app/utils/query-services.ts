@@ -116,7 +116,6 @@ export const AxiosEndpoint = {
         name : task.name,
         description : task.description,
         creationDate : task.creationDate,
-        initionDate : task.initionDate,
         endDate : task.endDate,
         durationTime : task.DurationTime,
         status : task.Status,
@@ -127,7 +126,7 @@ export const AxiosEndpoint = {
     }
   },
 
-  
+
   user: {
     login: async (login: string, password: string): Promise<Array<any>> => {
       const requestBody = {
