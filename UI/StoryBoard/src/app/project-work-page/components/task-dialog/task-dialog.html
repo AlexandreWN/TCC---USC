@@ -1,17 +1,14 @@
 <h1 mat-dialog-title class="tittle">ADICIONAR TASK</h1>
 <div mat-dialog-content class="container" [formGroup]="mainForm">
   
-  <mat-label class="Name">Sprint Name</mat-label>
+  <mat-label class="Name">Task Name</mat-label>
   <input matInput #name formControlName="name" id="Name">
 
-  <mat-label class="Name">Description</mat-label>
+  <mat-label class="Name">Task Description</mat-label>
   <input matInput type="text" #description formControlName="description" id="description">
 
-  <mat-label class="Name">Initial Date</mat-label>
-  <input matInput type="date" #initionDate formControlName="initionDate" id="initionDate">
-
-  <mat-label class="Name">EndDate</mat-label>
-  <input matInput type="date" #endDate formControlName="endDate" id="endDate">
+  <mat-label class="Name">Time</mat-label>
+  <input matInput type="time" #DurationTime formControlName="#DurationTime" id="#DurationTime">
   
 </div>
 <div mat-dialog-actions class="buttonContainer">
