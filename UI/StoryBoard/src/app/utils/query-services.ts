@@ -4,6 +4,7 @@ import { ProjectDto } from '../dtos/project-dto/project-dto';
 import { UserProjectDto } from '../dtos/user-project-dto/user-project-dto';
 import { SprintDto } from '../dtos/sprint-dto/sprint-dto';
 import { StoryDto } from '../dtos/story-dto/story-dto';
+import { TasktDto } from '../dtos/task-dto/task-dto';
 
 export const MainApiBaseRoute ='https://localhost:7086';
 
@@ -25,6 +26,12 @@ export const EndpointUrl = {
     register: () => `${MainApiBaseRoute}/Story/register`,
     getStoryBySprintId: (id: number) => `${MainApiBaseRoute}/Story/getStoryBySprintId/${id}`
   },
+
+  task: {
+    register: () => `${MainApiBaseRoute}/Task/register`,
+    getTaskByStoryId: (id: number) => `${MainApiBaseRoute}/Task/getStoryByStoryId/${id}`
+  },
+
   user: {
     login: () => `${MainApiBaseRoute}/User/login`,
     register: () => `${MainApiBaseRoute}/User/register`,
@@ -98,6 +105,28 @@ export const AxiosEndpoint = {
       return response.data;
     }
   },
+
+  task: {
+    getTaskByStoryId:async (id: number): Promise<Array<any>> => {
+      let response = await axios.get(EndpointUrl.task.getTaskByStoryId(id));
+      return response.data;
+    },
+    register:async (task: TasktDto) => {
+      const requestBody = {
+        name : task.name,
+        description : task.description,
+        creationDate : task.creationDate,
+        initionDate : task.initionDate,
+        endDate : task.endDate,
+        durationTime : task.DurationTime,
+        status : task.Status,
+        idStory: task.idStory
+      };
+      let response = await axios.post(EndpointUrl.task.register(), requestBody);
+      return response.data;
+    }
+  },
+
   user: {
     login: async (login: string, password: string): Promise<Array<any>> => {
       const requestBody = {

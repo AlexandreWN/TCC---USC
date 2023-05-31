@@ -14,6 +14,7 @@
                 </mat-select>
             </mat-form-field>
             <button (click)="openDialogStory()"><a>Adicionar Story</a></button>
+            <button (click)="openDialogTask()"><a>Adicionar Task</a></button>
         </div>
     </div>
     <div class="content" *ngFor="let story of queryCommandStory | async">
