@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { SprintDialogComponent } from './components/sprint-dialog/sprint-dialog';
 import { StoryDialogComponent } from './components/story-dialog/story-dialog';
+import { TaskDialogComponent } from './components/task-dialog/task-dialog';
 import { ActivatedRoute } from '@angular/router';
 import { AxiosEndpoint } from '../utils/query-services';
 
@@ -18,10 +19,12 @@ export class ProjectWorkPageComponent {
 
   projectId!: number;
   sprintId!:number;
+  storyID!:number;
 
   queryCommandProject!: Promise<any>;
   queryCommandSprint!: Promise<any>;
   queryCommandStory!: Promise<any>;
+  queryCommandTask!: Promise<any>;
 
   constructor(
     private readonly dialog: MatDialog
@@ -68,6 +71,14 @@ export class ProjectWorkPageComponent {
     localStorage.setItem('sprintId', JSON.stringify(option))
     this.sprintId = option;
     this.queryCommandStory = AxiosEndpoint.story.getStoryBySprintId(option)
+  }
+
+  openDialogTask(): void {
+    const dialogRef = this.dialog.open(TaskDialogComponent, {data: this.storyID});
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.queryCommandTask = AxiosEndpoint.task.getTaskByStoryId(this.storyID)
+    });
   }
 
   openDialogStory(): void {
