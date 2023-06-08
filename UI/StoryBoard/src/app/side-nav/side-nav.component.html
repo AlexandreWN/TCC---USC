@@ -1,10 +1,22 @@
 <div class="side-nav-content">
     <ul class="nav-list" [ngClass]="{'nav-list-open' : sideNavStatus}">
-        <li class="nav-list-item" *ngFor="let item of list">
-            <i class="{{item.icon}}"></i>
+        <a class="nav-list-item" href="#">
+            <mat-icon>home</mat-icon>
             <span>
-                <a href="#">{{item.name}}</a>
+               Home
             </span>
-        </li>
+        </a>
+        <a class="nav-list-item" href="initial-page">
+            <mat-icon>person</mat-icon>
+            <span>
+                my projects
+            </span>
+        </a>
+        <a class="nav-list-item" href="initial-page">
+            <mat-icon>group</mat-icon>
+            <span>
+                my team projects
+            </span>
+        </a>
     </ul>
 </div>

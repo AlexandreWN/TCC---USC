@@ -4,7 +4,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { SprintDialogComponent } from './components/sprint-dialog/sprint-dialog';
 import { StoryDialogComponent } from './components/story-dialog/story-dialog';
 import { TaskDialogComponent } from './components/task-dialog/task-dialog';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AxiosEndpoint } from '../utils/query-services';
 
 @Component({
@@ -26,19 +26,30 @@ export class ProjectWorkPageComponent {
   queryCommandStory!: Promise<any>;
   queryCommandTask!: Promise<any>;
 
+  selectedOption: string = "";
+
   constructor(
     private readonly dialog: MatDialog
     , private route: ActivatedRoute
-    ){
+    , private _router: Router
+  ){
+    if(localStorage.getItem('user') ===  null){
+      this._router.navigate([''])
+    }
+    else{
       this.route.queryParams.subscribe(params => {
         this.projectId = params['id'];
         this.queryCommandProject = AxiosEndpoint.project.getById(this.projectId)
         this.queryCommandSprint = AxiosEndpoint.sprint.getSprintLikeProjectId(this.projectId);
       });
+    }
   }
 
   ngOnInit() {
-    
+    this.queryCommandSprint.then(x => {
+      this.selectedOption = x[0].id
+      this.onOptionSelected(x[0].id)
+    })
   }
 
   name!: string;
@@ -71,14 +82,6 @@ export class ProjectWorkPageComponent {
     localStorage.setItem('sprintId', JSON.stringify(option))
     this.sprintId = option;
     this.queryCommandStory = AxiosEndpoint.story.getStoryBySprintId(option)
-  }
-
-  openDialogTask(): void {
-    const dialogRef = this.dialog.open(TaskDialogComponent, {data: this.storyID});
-
-    dialogRef.afterClosed().subscribe(result => {
-      this.queryCommandTask = AxiosEndpoint.task.getTaskByStoryId(this.storyID)
-    });
   }
 
   openDialogStory(): void {

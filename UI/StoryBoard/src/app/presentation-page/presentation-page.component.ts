@@ -17,7 +17,6 @@ export class PresentationPageComponent {
     const dialogRef = this.dialog.open(LoginDialogComponent);
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
       this.animal = result;
     });
   }
@@ -25,7 +24,6 @@ export class PresentationPageComponent {
     const dialogRef = this.dialog.open(RegisterDialogComponent);
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
       this.animal = result;
     });
   }

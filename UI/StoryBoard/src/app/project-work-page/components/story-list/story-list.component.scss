@@ -60,3 +60,31 @@
   overflow: hidden;
   display: block;
 }
+
+.buttonTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+
+  button {
+    background-color: #404040;
+    border-radius: 5px;
+    border: none;
+    height: 3em;
+    width: 7.5em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-right: 2em;
+    margin-left: 1em;
+  }
+
+  .selector {
+    height: 5em;
+  }
+}
+
+.taskButton {
+
+}

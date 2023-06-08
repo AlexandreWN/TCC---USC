@@ -43,7 +43,6 @@ export class RegisterDialogComponent implements OnInit{
   }
 
   submitRegister(){
-    console.log(this.mainForm)
     if(this.mainForm.value.password === this.mainForm.value.repeatpassword){
       this.user = UserDto.createFromFormValues(this.mainForm.value)
    

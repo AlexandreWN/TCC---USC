@@ -44,7 +44,6 @@ export class LoginDialogComponent implements OnInit{
     this.dialogRef.close();
 
     dialogRef2.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
       this.animal = result;
     });
   }
@@ -55,7 +54,6 @@ export class LoginDialogComponent implements OnInit{
   }
 
   submitLogin(){
-    console.log(this.mainForm)
     this.queryCommand = AxiosEndpoint.user.login(this.mainForm.value.login, this.mainForm.value.password)
     
     this.queryCommand.then(result => {

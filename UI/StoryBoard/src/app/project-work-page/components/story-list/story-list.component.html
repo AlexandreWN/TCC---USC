@@ -12,13 +12,14 @@
         <h2>To do</h2>
         
         <div
+            id="todo"
             cdkDropList
             #todoList="cdkDropList"
             [cdkDropListData]="todo"
             [cdkDropListConnectedTo]="[inProgessList, doneList, todoList]"
             class="example-list"
             (cdkDropListDropped)="drop($event)">
-            <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item}}</div>
+            <div class="example-box" *ngFor="let item of todo" cdkDrag>{{item.name}}</div>
         </div>
     </div>
 
@@ -26,13 +27,14 @@
         <h2>In progress</h2>
         
         <div
+            id="inprogress"
             cdkDropList
             #inProgessList="cdkDropList"
-            [cdkDropListData]="inProgess"
+            [cdkDropListData]="inProgress"
             [cdkDropListConnectedTo]="[inProgessList, doneList, todoList]"
             class="example-list"
             (cdkDropListDropped)="drop($event)">
-            <div class="example-box" *ngFor="let item of inProgess" cdkDrag>{{item}}</div>
+            <div class="example-box" *ngFor="let item of inProgress" cdkDrag>{{item.name}}</div>
         </div>
     </div>
         
@@ -40,13 +42,17 @@
         <h2>Done</h2>
         
         <div
+            id="done"
             cdkDropList
             #doneList="cdkDropList"
             [cdkDropListData]="done"
             [cdkDropListConnectedTo]="[inProgessList, doneList, todoList]"
             class="example-list"
             (cdkDropListDropped)="drop($event)">
-            <div class="example-box" *ngFor="let item of done" cdkDrag>{{item}}</div>
+            <div class="example-box" *ngFor="let item of done" cdkDrag>{{item.name}}</div>
         </div>
+    </div>
+    <div class="buttonTop">
+        <button (click)="openDialogTask()" ><a>Adicionar Task</a></button>
     </div>
 </mat-expansion-panel>

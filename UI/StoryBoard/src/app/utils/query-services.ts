@@ -4,7 +4,7 @@ import { ProjectDto } from '../dtos/project-dto/project-dto';
 import { UserProjectDto } from '../dtos/user-project-dto/user-project-dto';
 import { SprintDto } from '../dtos/sprint-dto/sprint-dto';
 import { StoryDto } from '../dtos/story-dto/story-dto';
-import { TasktDto } from '../dtos/task-dto/task-dto';
+import { TaskDto } from '../dtos/task-dto/task-dto';
 
 export const MainApiBaseRoute ='https://localhost:7086';
 
@@ -29,7 +29,8 @@ export const EndpointUrl = {
 
   task: {
     register: () => `${MainApiBaseRoute}/Task/register`,
-    getTaskByStoryId: (id: number) => `${MainApiBaseRoute}/Task/getStoryByStoryId/${id}`
+    getTaskByStoryId: (id: number) => `${MainApiBaseRoute}/Task/getTaskByStoryId/${id}`,
+    update: () => `${MainApiBaseRoute}/Task/updateTask`
   },
 
   user: {
@@ -55,6 +56,7 @@ export const AxiosEndpoint = {
       return response.data;
     }
   },
+
   project: {
     getById:async (id : number): Promise<Array<any>> => {
       let response = await axios.get(EndpointUrl.project.getById(id));
@@ -71,6 +73,7 @@ export const AxiosEndpoint = {
       return response.data;
     }
   },
+
   sprint: {
     getSprintLikeProjectId:async (id: number): Promise<Array<any>> => {
       let response = await axios.get(EndpointUrl.sprint.getSprintLikeProjectId(id));
@@ -89,6 +92,7 @@ export const AxiosEndpoint = {
       return response.data;
     }
   },
+
   story: {
     getStoryBySprintId:async (id: number): Promise<Array<any>> => {
       let response = await axios.get(EndpointUrl.story.getStoryBySprintId(id));
@@ -111,24 +115,26 @@ export const AxiosEndpoint = {
       let response = await axios.get(EndpointUrl.task.getTaskByStoryId(id));
       return response.data;
     },
-    register:async (task: TasktDto) => {
+    register:async (task: TaskDto) => {
       const requestBody = {
         name : task.name,
         description : task.description,
         creationDate : task.creationDate,
-        endDate : task.endDate,
-        durationTime : task.DurationTime,
-        status : task.Status,
+        durationTime : task.durationTime,
+        status : task.status,
         idStory: task.idStory
       };
       let response = await axios.post(EndpointUrl.task.register(), requestBody);
       return response.data;
+    },
+    update:async (obj: TaskDto): Promise<Array<any>> => {
+      let response = await axios.put(EndpointUrl.task.update(), obj);
+      return response.data;
     }
   },
 
-
   user: {
-    login: async (login: string, password: string): Promise<Array<any>> => {
+    login:async (login: string, password: string): Promise<Array<any>> => {
       const requestBody = {
         login: login,
         password: password

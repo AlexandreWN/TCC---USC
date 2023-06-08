@@ -42,7 +42,6 @@ export class SprintDialogComponent implements OnInit{
   }
 
   submitRegister(){
-    console.log(this.mainForm);
     this.sprint = SprintDto.createFromFormValues(this.mainForm.value);
 
     this.submitCommand = AxiosEndpoint.sprint.register(this.sprint);

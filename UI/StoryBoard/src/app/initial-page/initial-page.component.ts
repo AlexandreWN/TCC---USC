@@ -27,11 +27,15 @@ export class InitialPageComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.user = JSON.parse(localStorage.getItem('user') ?? "");
-    if(this.user !== undefined){
-      console.log(this.user.id)
-      this.queryCommandProjects = AxiosEndpoint.userProject.getAllByUserId(this.user.id, "adm")
-      this.queryCommandTeamProjects = AxiosEndpoint.userProject.getAllByUserId(this.user.id, "team")
+    if(localStorage.getItem('user') ===  null){
+      this._router.navigate([''])
+    }
+    else{
+      this.user = JSON.parse(localStorage.getItem('user') ?? "");
+      if(this.user !== undefined){
+        this.queryCommandProjects = AxiosEndpoint.userProject.getAllByUserId(this.user.id, "adm")
+        this.queryCommandTeamProjects = AxiosEndpoint.userProject.getAllByUserId(this.user.id, "team")
+      }
     }
   }
 
@@ -48,7 +52,6 @@ export class InitialPageComponent implements OnInit{
     const dialogRef = this.dialog.open(AddProjectDialogComponent);
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
       this.animal = result;
       this.reset();
     });

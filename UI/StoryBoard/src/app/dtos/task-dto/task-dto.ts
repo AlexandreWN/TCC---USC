@@ -1,21 +1,20 @@
-export class TasktDto {
+export class TaskDto {
     id : number = 0;
     name : string = "";
     description : string = "";
     creationDate : Date = new Date;
     endDate : Date = new Date;
-    DurationTime : number = 0;
-    Status : string = "";
+    durationTime : number = 0;
+    status : string = "";
     idStory: number = 0;
 
-    static createFromFormValues(formValues: any): TasktDto {
-        const task = new TasktDto();
+    static createFromFormValues(formValues: any): TaskDto {
+        const task = new TaskDto();
         task.name = formValues.name;
         task.description = formValues.description;
         task.creationDate = formValues.creationDate;
-        task.endDate = formValues.endDate;
-        task.DurationTime = formValues.DurationTime;
-        task.Status = formValues.Status;
+        task.durationTime = formValues.durationTime;
+        task.status = formValues.status;
         task.idStory = formValues.idStory;
         return task;
     }

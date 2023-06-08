@@ -88,7 +88,6 @@ export class AddProjectDialogComponent implements OnInit{
     const dialogRef = this.dialog.open(AddProjectDialogComponent);
 
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
       this.animal = result;
     });
   }

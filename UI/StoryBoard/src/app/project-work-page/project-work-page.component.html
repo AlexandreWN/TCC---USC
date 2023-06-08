@@ -6,18 +6,17 @@
         <div class="buttonTop">
             <mat-form-field class="selector">
                 <mat-label>Selecione a sprint</mat-label>
-                <mat-select (selectionChange)="onOptionSelected($event.value)">
+                <mat-select [(ngModel)]="selectedOption" (selectionChange)="onOptionSelected($event.value)">
                     <ng-container *ngIf="(queryCommandSprint | async)?.length !== 0">
-                        <mat-option *ngFor="let sprint of queryCommandSprint | async" value="{{sprint.id}}">{{sprint.name}}</mat-option>
+                      <mat-option *ngFor="let sprint of queryCommandSprint | async" [value]="sprint.id">{{sprint.name}}</mat-option>
                     </ng-container>
-                    <mat-option value="2" (click)="openDialogSprint()">Adicionar Sprint</mat-option>
+                    <mat-option (click)="openDialogSprint()">Adicionar Sprint</mat-option>
                 </mat-select>
             </mat-form-field>
-            <button (click)="openDialogStory()"><a>Adicionar Story</a></button>
-            <button (click)="openDialogTask()" class="task"><a>Adicionar Task</a></button>
+            <button (click)="openDialogStory()" *ngIf="sprintId !== undefined"><a>Adicionar Story</a></button>
         </div>
     </div>
     <div class="content" *ngFor="let story of queryCommandStory | async">
-        <app-story-list [Entity]="this.story"></app-story-list>
+        <app-story-list [Entity]="story"></app-story-list>
     </div>
 </nav>

@@ -15,6 +15,5 @@ export class AppComponent {
 
   ngOnInit() {
     this.path =  window.location.href;
-    console.log(this.path)
-}
+  }
 }

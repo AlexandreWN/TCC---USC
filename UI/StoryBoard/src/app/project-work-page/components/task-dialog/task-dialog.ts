@@ -2,7 +2,7 @@ import { ResourceLoader } from '@angular/compiler';
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { TasktDto } from 'src/app/dtos/task-dto/task-dto';
+import { TaskDto } from 'src/app/dtos/task-dto/task-dto';
 import { UserDto } from 'src/app/dtos/user-dto/user-dto';
 import { AxiosEndpoint } from 'src/app/utils/query-services';
 
@@ -22,8 +22,8 @@ export class TaskDialogComponent implements OnInit{
   submitCommand!: Promise<any>;
 
   user!: UserDto;
-  storyID!: number;
-  task!: TasktDto;
+  idStory!: number;
+  task!: TaskDto;
 
   constructor(
     public dialogRef: MatDialogRef<TaskDialogComponent>,
@@ -35,28 +35,28 @@ export class TaskDialogComponent implements OnInit{
   }
 
   onNoClick(): void {
-    this.dialogRef.close();
+    //this.dialogRef.close();
+    console.log(this.mainForm)
   }
 
   createFormGroup(){
     this.mainForm.addControl("name", new FormControl("", [Validators.required]));
     this.mainForm.addControl("description", new FormControl("", [Validators.required]));
     this.mainForm.addControl("creationDate", new FormControl(new Date));
-    this.mainForm.addControl("endDate", new FormControl("", [Validators.required]));
     this.mainForm.addControl("durationTime", new FormControl("", [Validators.required]));
-    this.mainForm.addControl("status", new FormControl("", [Validators.required]));
-    this.mainForm.addControl("idSprint", new FormControl(this.data));
+    this.mainForm.addControl("status", new FormControl("todo", [Validators.required]));
+    this.mainForm.addControl("idStory", new FormControl(this.data));
   }
 
   submitRegister(){
-    if(this.storyID !== null){
-      this.task = TasktDto.createFromFormValues(this.mainForm.value)
+    if(this.idStory !== null){
+      this.task = TaskDto.createFromFormValues(this.mainForm.value)
       this.submitCommand = AxiosEndpoint.task.register(this.task);
 
       this.submitCommand.then(result => {
         if(result && result.length !== 0) {
           this.dialogRef.close();
-          alert("Task cadastrado com sucesso")
+          alert("Task cadastrada com sucesso")
         }
       }).catch(error => {
         alert("Erro ao cadastrar Task "+error)

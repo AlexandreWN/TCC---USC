@@ -47,3 +47,51 @@ a {
     text-decoration: none;
     color: white;
 }
+
+span {
+    padding: 1.5em;
+    font-size: 1.3rem;
+}
+
+mat-icon {
+    font-size: 1.7rem;
+}
+
+.panel {
+    color: white;
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none;
+    width: 90%;
+}
+
+.pabelTitle {
+    color: white;
+}
+
+.panel:nth-child(n + 2) {
+    margin-top: 10px;
+}
+
+.nav-list-project {
+    font-size: 20px;
+    height: 25px;
+    width: 25px;
+    margin-right: 15px;
+    margin-left: 3em;
+    text-align: center;
+    line-height: 25px;
+}
+
+.itensList {
+    margin-left: 3em;
+    padding: .5em;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.itensList:nth-child(1) {
+    margin-top: -1.5em;
+}

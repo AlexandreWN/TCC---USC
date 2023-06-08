@@ -14,11 +14,15 @@ export class HeaderComponent{
   constructor(private readonly dialog: MatDialog){}
 
   ngOnInit(): void {
-    
+
   }
 
   SideNavToggle() {
     this.menuStatus = !this.menuStatus;
     this.sideNavToggled.emit(this.menuStatus);
+  }
+
+  end() {
+    localStorage.clear();
   }
 }
