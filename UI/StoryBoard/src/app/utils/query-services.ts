@@ -132,7 +132,6 @@ export const AxiosEndpoint = {
       return response.data;
     }
   },
-
   user: {
     login:async (login: string, password: string): Promise<Array<any>> => {
       const requestBody = {

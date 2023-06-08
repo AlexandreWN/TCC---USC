@@ -25,7 +25,6 @@ export class ProjectWorkPageComponent {
   queryCommandSprint!: Promise<any>;
   queryCommandStory!: Promise<any>;
   queryCommandTask!: Promise<any>;
-
   selectedOption: string = "";
 
   constructor(
@@ -82,6 +81,14 @@ export class ProjectWorkPageComponent {
     localStorage.setItem('sprintId', JSON.stringify(option))
     this.sprintId = option;
     this.queryCommandStory = AxiosEndpoint.story.getStoryBySprintId(option)
+  }
+
+  openDialogTask(): void {
+    const dialogRef = this.dialog.open(TaskDialogComponent, {data: this.storyID});
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.queryCommandTask = AxiosEndpoint.task.getTaskByStoryId(this.storyID)
+    });
   }
 
   openDialogStory(): void {

@@ -35,8 +35,7 @@ export class TaskDialogComponent implements OnInit{
   }
 
   onNoClick(): void {
-    //this.dialogRef.close();
-    console.log(this.mainForm)
+    this.dialogRef.close();
   }
 
   createFormGroup(){
