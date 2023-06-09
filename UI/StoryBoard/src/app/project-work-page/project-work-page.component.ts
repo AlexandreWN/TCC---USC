@@ -6,6 +6,7 @@ import { StoryDialogComponent } from './components/story-dialog/story-dialog';
 import { TaskDialogComponent } from './components/task-dialog/task-dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AxiosEndpoint } from '../utils/query-services';
+import { ColaboradorDialogComponent } from './components/colaborador-dialog/colaborador-dialog';
 
 @Component({
   selector: 'app-project-work-page',
@@ -52,6 +53,8 @@ export class ProjectWorkPageComponent {
   }
 
   name!: string;
+  animal!: string;
+
 
 
   openDialogSprint(): void {
@@ -98,4 +101,14 @@ export class ProjectWorkPageComponent {
       this.queryCommandStory = AxiosEndpoint.story.getStoryBySprintId(this.sprintId)
     });
   }
+
+  openDialogColaborador(): void {
+    const dialogRef = this.dialog.open(ColaboradorDialogComponent);
+
+    dialogRef.afterClosed().subscribe(result => {
+      this.animal = result;
+    });
+  }
+
+
 }
