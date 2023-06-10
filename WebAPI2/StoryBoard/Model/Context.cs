@@ -15,7 +15,8 @@ namespace Model
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Server=tcp:storyboard.database.windows.net,1433;Initial Catalog=StoryBoard;Persist Security Info=False;User ID=Story.Board;Password=Pokemonavg123*;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            //optionsBuilder.UseSqlServer("Server=tcp:storyboard.database.windows.net,1433;Initial Catalog=StoryBoard;Persist Security Info=False;User ID=Story.Board;Password=Pokemonavg123*;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            optionsBuilder.UseSqlServer("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=StoryBoard; Integrated Security=SSPI;TrustServerCertificate=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

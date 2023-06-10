@@ -35,6 +35,13 @@ public class UserProject
         return userProject;
     }
 
+    public static UserProject CreateTeam(TeamDto dto)
+    {
+        var user = User.GetUserLikeEmail(dto.UserEmail);
+
+        return Create(user.Id, dto.IdProject, dto.UserType, dto.AvailabilityTime);
+    }
+
     public static UserProject Create(UserProjectDto dto)
     {
         var userProject = new UserProject(dto.IdUser, dto.IdProject, dto.UserType, dto.AvailabilityTime);

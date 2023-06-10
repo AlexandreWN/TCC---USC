@@ -103,10 +103,9 @@ export class ProjectWorkPageComponent {
   }
 
   openDialogColaborador(): void {
-    const dialogRef = this.dialog.open(ColaboradorDialogComponent);
+    const dialogRef = this.dialog.open(ColaboradorDialogComponent, {data: this.projectId});
 
     dialogRef.afterClosed().subscribe(result => {
-      this.animal = result;
     });
   }
 

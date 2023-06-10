@@ -1,21 +1,27 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\StoryBoardd\\TCC-USC\\WebAPI2\\StoryBoard\\Dto\\Dto.csproj": {}
+    "C:\\REPOSITORIOS\\TCC-USC\\WebAPI2\\StoryBoard\\Dto\\Dto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\StoryBoardd\\TCC-USC\\WebAPI2\\StoryBoard\\Dto\\Dto.csproj": {
+    "C:\\REPOSITORIOS\\TCC-USC\\WebAPI2\\StoryBoard\\Dto\\Dto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\StoryBoardd\\TCC-USC\\WebAPI2\\StoryBoard\\Dto\\Dto.csproj",
+        "projectUniqueName": "C:\\REPOSITORIOS\\TCC-USC\\WebAPI2\\StoryBoard\\Dto\\Dto.csproj",
         "projectName": "Dto",
-        "projectPath": "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\StoryBoardd\\TCC-USC\\WebAPI2\\StoryBoard\\Dto\\Dto.csproj",
-        "packagesPath": "C:\\Users\\wyll_\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wyll_\\OneDrive\\Ambiente de Trabalho\\StoryBoardd\\TCC-USC\\WebAPI2\\StoryBoard\\Dto\\obj\\",
+        "projectPath": "C:\\REPOSITORIOS\\TCC-USC\\WebAPI2\\StoryBoard\\Dto\\Dto.csproj",
+        "packagesPath": "C:\\Users\\nia1ct\\.nuget\\packages\\",
+        "outputPath": "C:\\REPOSITORIOS\\TCC-USC\\WebAPI2\\StoryBoard\\Dto\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\wyll_\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\nia1ct\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"

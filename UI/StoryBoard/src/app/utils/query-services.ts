@@ -5,6 +5,7 @@ import { UserProjectDto } from '../dtos/user-project-dto/user-project-dto';
 import { SprintDto } from '../dtos/sprint-dto/sprint-dto';
 import { StoryDto } from '../dtos/story-dto/story-dto';
 import { TaskDto } from '../dtos/task-dto/task-dto';
+import { TeamDto } from '../dtos/user-dto/team-dto';
 
 export const MainApiBaseRoute ='https://localhost:7086';
 
@@ -12,6 +13,7 @@ export const EndpointUrl = {
   userProject: {
     getAllByUserId: (id: number, userType: string) => `${MainApiBaseRoute}/UserProject/getUserProjectsLikeUserId/${id}/${userType}`,
     register: () => `${MainApiBaseRoute}/UserProject/register`,
+    registerTeam: () => `${MainApiBaseRoute}/UserProject/registerTeam`
     //update: (id:  number)  =>  `${MainApiBaseRoute}/User/Update/${id}`
   },
   project: {
@@ -53,6 +55,16 @@ export const AxiosEndpoint = {
         availabilityTime: userProject.availabilityTime
       };
       let response = await axios.post(EndpointUrl.userProject.register(), requestBody);
+      return response.data;
+    },
+    registerTeam:async (userProject: TeamDto) => {
+      const requestBody = {
+        userEmail: userProject.userEmail,
+        idProject: userProject.idProject,
+        userType: userProject.userType,
+        availabilityTime: userProject.availabilityTime
+      };
+      let response = await axios.post(EndpointUrl.userProject.registerTeam(), requestBody);
       return response.data;
     }
   },
@@ -144,7 +156,7 @@ export const AxiosEndpoint = {
     register:async (user: UserDto) => {
       const requestBody = {
         name: user.name,
-        login: user.password,
+        login: user.login,
         password: user.password,
         active: true,
         adm: false

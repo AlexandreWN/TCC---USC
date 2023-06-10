@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -87,6 +88,16 @@ public class User
             .ToListAsync();
 
         return users;
+    }
+
+    public static User GetUserLikeEmail(string email)
+    {
+        using var context = new Context();
+
+        var user = context.User
+            .FirstOrDefault(x => x.Login == email);
+
+        return user;
     }
 
     public async Task<User> SaveAsync()

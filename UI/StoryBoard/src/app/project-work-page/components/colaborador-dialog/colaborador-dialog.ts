@@ -2,6 +2,7 @@ import { ResourceLoader } from '@angular/compiler';
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { TeamDto } from 'src/app/dtos/user-dto/team-dto';
 import { UserDto } from 'src/app/dtos/user-dto/user-dto';
 import { AxiosEndpoint } from 'src/app/utils/query-services';
 
@@ -16,7 +17,7 @@ export class ColaboradorDialogComponent implements OnInit{
 
   submitCommand!: Promise<any>;
 
-  user!: UserDto;
+  team!: TeamDto;
 
   constructor(
     public dialogRef: MatDialogRef<ColaboradorDialogComponent>,
@@ -32,18 +33,16 @@ export class ColaboradorDialogComponent implements OnInit{
   }
 
   createFormGroup(){
-    this.mainForm.addControl("name", new FormControl("", [Validators.required]));
-    this.mainForm.addControl("description", new FormControl("", [Validators.required]));
-    this.mainForm.addControl("creationDate", new FormControl(new Date));
-    this.mainForm.addControl("initionDate", new FormControl("", [Validators.required]));
-    this.mainForm.addControl("endDate", new FormControl("", [Validators.required]));
+    this.mainForm.addControl("userEmail", new FormControl("", [Validators.required]));
     this.mainForm.addControl("idProject", new FormControl(this.data));
+    this.mainForm.addControl("userType", new FormControl("team"));
+    this.mainForm.addControl("availabilityTime", new FormControl(0));
   }
 
   submitRegister(){
-    this.user = UserDto.createFromFormValues(this.mainForm.value);
+    this.team = TeamDto.createFromFormValues(this.mainForm.value);
 
-    this.submitCommand = AxiosEndpoint.user.register(this.user);
+    this.submitCommand = AxiosEndpoint.userProject.registerTeam(this.team);
 
     this.submitCommand.then(result => {
       if(result && result.length !== 0) {
@@ -51,7 +50,7 @@ export class ColaboradorDialogComponent implements OnInit{
         alert("Colaborador cadastrado com sucesso")
       }
     }).catch(error => {
-      alert("Erro ao cadastrar Colaborador "+error)
+      alert("Email de usuario inexistente")
     });
   }
 }

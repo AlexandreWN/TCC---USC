@@ -1,12 +1,7 @@
 <h1 mat-dialog-title class="tittle">ADICIONAR COLABORADOR</h1>
 <div mat-dialog-content class="container" [formGroup]="mainForm">
-  
-  <mat-label class="Name">Name</mat-label>
-  <input matInput #name formControlName="name" id="Name">
-
   <mat-label class="Name">Email</mat-label>
-  <input matInput type="text" #description formControlName="description" id="description">
-  
+  <input matInput type="email" #description formControlName="userEmail" id="description">
 </div>
 <div mat-dialog-actions class="buttonContainer">
   <button mat-button cdkFocusInitial class="button" (click)="onNoClick()">Cancel</button>

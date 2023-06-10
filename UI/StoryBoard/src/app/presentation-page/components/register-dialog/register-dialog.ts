@@ -45,6 +45,9 @@ export class RegisterDialogComponent implements OnInit{
   submitRegister(){
     if(this.mainForm.value.password === this.mainForm.value.repeatpassword){
       this.user = UserDto.createFromFormValues(this.mainForm.value)
+      
+      console.log(this.mainForm.value)
+      console.log(this.user)
    
       this.queryCommand = AxiosEndpoint.user.register(this.user)
       

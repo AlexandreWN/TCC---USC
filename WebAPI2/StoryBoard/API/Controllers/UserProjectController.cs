@@ -19,6 +19,17 @@ public class UserProjectController : ControllerBase
         return Ok(userProject.Id);
     }
 
+    [HttpPost]
+    [Route("registerTeam")]
+    public async Task<IActionResult> RegisterTeamProject([FromBody] TeamDto dto)
+    {
+        var userProject = await UserProject
+            .CreateTeam(dto)
+            .SaveAsync();
+
+        return Ok(userProject.Id);
+    }
+
     [HttpGet]
     [Route("getUserProjects")]
     public async Task<IActionResult> GetAllUserProjects()
