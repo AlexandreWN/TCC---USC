@@ -38,4 +38,14 @@ public class TaskController : ControllerBase
 
         return Ok(task);
     }
+
+    [HttpPost]
+    [Route("delete")]
+    public async Task<IActionResult> DeleteTaskAsync([FromBody] TaskDeleteDto dto)
+    {
+        var task = await Model.Task
+            .DeleteTaskAsync(dto);
+
+        return Ok(task);
+    }
 }

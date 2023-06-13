@@ -55,7 +55,6 @@ export class TaskDialogComponent implements OnInit{
       this.submitCommand.then(result => {
         if(result && result.length !== 0) {
           this.dialogRef.close();
-          alert("Task cadastrada com sucesso")
         }
       }).catch(error => {
         alert("Erro ao cadastrar Task "+error)

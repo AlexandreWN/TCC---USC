@@ -13,7 +13,8 @@
                     <mat-option (click)="openDialogSprint()">Adicionar Sprint</mat-option>
                 </mat-select>
             </mat-form-field>
-            <button (click)="openDialogStory()" *ngIf="sprintId !== undefined"><a>Adicionar Story</a></button>
+            <button (click)="openDialogStory()" *ngIf="sprintId !== undefined" class="buttonfirst"><a>Adicionar Story</a></button>
+            <button (click)="openDialogColaborador()" *ngIf="sprintId !== undefined"><a>Adicionar Membro</a></button>
         </div>
     </div>
     <div class="content" *ngFor="let story of queryCommandStory | async">

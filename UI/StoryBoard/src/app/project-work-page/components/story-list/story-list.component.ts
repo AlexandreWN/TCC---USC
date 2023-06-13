@@ -23,6 +23,8 @@ export class StoryListComponent {
 
   queryCommandTask!: Promise<any>;
   updateCommand!: Promise<any>;
+  deleteCommand!: Promise<any>;
+  deleteStoryCommand!: Promise<any>;
 
   constructor(
     private readonly dialog: MatDialog
@@ -66,7 +68,7 @@ export class StoryListComponent {
 
     dialogRef.afterClosed().subscribe(async result => {
       this.queryCommandTask = AxiosEndpoint.task.getTaskByStoryId(this.Entity.id)
-    try {
+      try {
         const result = await this.queryCommandTask;
         this.todo = result.filter((task: TaskDto) => task.status === 'todo');
         this.inProgress = result.filter((task: TaskDto) => task.status === 'inprogress');
@@ -75,6 +77,16 @@ export class StoryListComponent {
         console.error('Erro ao obter tarefas:', error);
       }
     });
+  }
+
+  async delete(id : number) {
+    this.deleteCommand = AxiosEndpoint.task.delete(id);
+    window.location.reload();
+  }
+
+  deleteStory() {
+    this.deleteStoryCommand = AxiosEndpoint.story.delete(this.Entity.id);
+    window.location.reload();
   }
 
   onOptionSelected(option: number) {

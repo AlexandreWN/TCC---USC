@@ -28,4 +28,14 @@ public class StoryController : ControllerBase
 
         return Ok(story);
     }
+
+    [HttpPost]
+    [Route("delete")]
+    public async Task<IActionResult> DeleteTaskAsync([FromBody] StoryDeleteDto dto)
+    {
+        var task = await Model.Story
+            .DeleteTaskAsync(dto);
+
+        return Ok(task);
+    }
 }

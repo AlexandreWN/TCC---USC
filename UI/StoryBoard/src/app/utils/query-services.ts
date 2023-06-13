@@ -5,13 +5,15 @@ import { UserProjectDto } from '../dtos/user-project-dto/user-project-dto';
 import { SprintDto } from '../dtos/sprint-dto/sprint-dto';
 import { StoryDto } from '../dtos/story-dto/story-dto';
 import { TaskDto } from '../dtos/task-dto/task-dto';
+import { TeamDto } from '../dtos/user-dto/team-dto';
 
-export const MainApiBaseRoute ='https://localhost:7086';
+export const MainApiBaseRoute ='https://storyboardapi.azurewebsites.net';
 
 export const EndpointUrl = {
   userProject: {
     getAllByUserId: (id: number, userType: string) => `${MainApiBaseRoute}/UserProject/getUserProjectsLikeUserId/${id}/${userType}`,
     register: () => `${MainApiBaseRoute}/UserProject/register`,
+    registerTeam: () => `${MainApiBaseRoute}/UserProject/registerTeam`
     //update: (id:  number)  =>  `${MainApiBaseRoute}/User/Update/${id}`
   },
   project: {
@@ -24,13 +26,15 @@ export const EndpointUrl = {
   },
   story: {
     register: () => `${MainApiBaseRoute}/Story/register`,
-    getStoryBySprintId: (id: number) => `${MainApiBaseRoute}/Story/getStoryBySprintId/${id}`
+    getStoryBySprintId: (id: number) => `${MainApiBaseRoute}/Story/getStoryBySprintId/${id}`,
+    delete: () => `${MainApiBaseRoute}/Story/delete`
   },
 
   task: {
     register: () => `${MainApiBaseRoute}/Task/register`,
     getTaskByStoryId: (id: number) => `${MainApiBaseRoute}/Task/getTaskByStoryId/${id}`,
-    update: () => `${MainApiBaseRoute}/Task/updateTask`
+    update: () => `${MainApiBaseRoute}/Task/updateTask`,
+    delete: () => `${MainApiBaseRoute}/Task/delete`
   },
 
   user: {
@@ -53,6 +57,16 @@ export const AxiosEndpoint = {
         availabilityTime: userProject.availabilityTime
       };
       let response = await axios.post(EndpointUrl.userProject.register(), requestBody);
+      return response.data;
+    },
+    registerTeam:async (userProject: TeamDto) => {
+      const requestBody = {
+        userEmail: userProject.userEmail,
+        idProject: userProject.idProject,
+        userType: userProject.userType,
+        availabilityTime: userProject.availabilityTime
+      };
+      let response = await axios.post(EndpointUrl.userProject.registerTeam(), requestBody);
       return response.data;
     }
   },
@@ -107,6 +121,11 @@ export const AxiosEndpoint = {
       };
       let response = await axios.post(EndpointUrl.story.register(), requestBody);
       return response.data;
+    },
+    delete:async (id: number) => {
+      const requestBody = { id: id };
+      let response = await axios.post(EndpointUrl.story.delete(), requestBody);
+      return response.data;
     }
   },
 
@@ -130,6 +149,11 @@ export const AxiosEndpoint = {
     update:async (obj: TaskDto): Promise<Array<any>> => {
       let response = await axios.put(EndpointUrl.task.update(), obj);
       return response.data;
+    },
+    delete:async (id: number) => {
+      const requestBody = { id: id };
+      let response = await axios.post(EndpointUrl.task.delete(), requestBody);
+      return response.data;
     }
   },
   user: {
@@ -144,7 +168,7 @@ export const AxiosEndpoint = {
     register:async (user: UserDto) => {
       const requestBody = {
         name: user.name,
-        login: user.password,
+        login: user.login,
         password: user.password,
         active: true,
         adm: false

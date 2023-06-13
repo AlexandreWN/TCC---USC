@@ -16,6 +16,7 @@ namespace Model
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseSqlServer("Server=tcp:storyboard.database.windows.net,1433;Initial Catalog=StoryBoard;Persist Security Info=False;User ID=Story.Board;Password=Pokemonavg123*;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
+            //optionsBuilder.UseSqlServer("Data Source=(LocalDb)\\MSSQLLocalDB;Initial Catalog=StoryBoard; Integrated Security=SSPI;TrustServerCertificate=True");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -86,13 +87,13 @@ namespace Model
                 entity.Property(d => d.IdSprint);
                 entity.Property(d => d.IdUserProject);
 
-                ///Gambiarra OnDelete para ignorar  restição de chave estrangeira CUIDADO
+                ///Gambiarra OnDelete para ignorar restição de chave estrangeira CUIDADO
                 entity.HasOne(s => s.Sprint)
                     .WithMany()
                     .HasForeignKey(s => s.IdSprint)
                     .OnDelete(DeleteBehavior.NoAction);
 
-                ///Gambiarra OnDelete para ignorar  restição de chave estrangeira CUIDADO
+                ///Gambiarra OnDelete para ignorar restição de chave estrangeira CUIDADO
                 entity.HasOne(up => up.UserProject)
                     .WithMany()
                     .HasForeignKey(up => up.IdUserProject)

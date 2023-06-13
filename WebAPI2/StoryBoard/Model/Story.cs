@@ -45,6 +45,24 @@ public class Story
         return projects;
     }
 
+    public static async Task<Story> DeleteTaskAsync(StoryDeleteDto dto)
+    {
+        using var context = new Context();
+
+        var story = await context.Story
+            .FirstAsync(x => x.Id == dto.Id);
+
+        //foreach(var task in story.Tasks)
+        //{
+        //    context.Task.Remove
+        //}
+
+        context.RemoveRange(story);
+        await context.SaveChangesAsync();
+
+        return story;
+    }
+
     public async Task<Story> SaveAsync()
     {
         using var context = new Context();

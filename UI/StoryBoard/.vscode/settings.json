@@ -13,5 +13,9 @@
             "password": "05032awn",
             "database": "ComVocePsicologia"
         }
+    ],
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
     ]
 }

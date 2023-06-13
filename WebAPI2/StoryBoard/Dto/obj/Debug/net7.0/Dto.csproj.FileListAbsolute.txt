@@ -22,3 +22,15 @@ C:\Users\wyll_\OneDrive\Ambiente de Trabalho\StoryBoardd\TCC-USC\WebAPI2\StoryBo
 C:\Users\wyll_\OneDrive\Ambiente de Trabalho\StoryBoardd\TCC-USC\WebAPI2\StoryBoard\Dto\obj\Debug\net7.0\refint\Dto.dll
 C:\Users\wyll_\OneDrive\Ambiente de Trabalho\StoryBoardd\TCC-USC\WebAPI2\StoryBoard\Dto\obj\Debug\net7.0\Dto.pdb
 C:\Users\wyll_\OneDrive\Ambiente de Trabalho\StoryBoardd\TCC-USC\WebAPI2\StoryBoard\Dto\obj\Debug\net7.0\ref\Dto.dll
+C:\REPOSITORIOS\TCC-USC\WebAPI2\StoryBoard\Dto\bin\Debug\net7.0\Dto.deps.json
+C:\REPOSITORIOS\TCC-USC\WebAPI2\StoryBoard\Dto\bin\Debug\net7.0\Dto.dll
+C:\REPOSITORIOS\TCC-USC\WebAPI2\StoryBoard\Dto\bin\Debug\net7.0\Dto.pdb
+C:\REPOSITORIOS\TCC-USC\WebAPI2\StoryBoard\Dto\obj\Debug\net7.0\Dto.csproj.AssemblyReference.cache
+C:\REPOSITORIOS\TCC-USC\WebAPI2\StoryBoard\Dto\obj\Debug\net7.0\Dto.GeneratedMSBuildEditorConfig.editorconfig
+C:\REPOSITORIOS\TCC-USC\WebAPI2\StoryBoard\Dto\obj\Debug\net7.0\Dto.AssemblyInfoInputs.cache
+C:\REPOSITORIOS\TCC-USC\WebAPI2\StoryBoard\Dto\obj\Debug\net7.0\Dto.AssemblyInfo.cs
+C:\REPOSITORIOS\TCC-USC\WebAPI2\StoryBoard\Dto\obj\Debug\net7.0\Dto.csproj.CoreCompileInputs.cache
+C:\REPOSITORIOS\TCC-USC\WebAPI2\StoryBoard\Dto\obj\Debug\net7.0\Dto.dll
+C:\REPOSITORIOS\TCC-USC\WebAPI2\StoryBoard\Dto\obj\Debug\net7.0\refint\Dto.dll
+C:\REPOSITORIOS\TCC-USC\WebAPI2\StoryBoard\Dto\obj\Debug\net7.0\Dto.pdb
+C:\REPOSITORIOS\TCC-USC\WebAPI2\StoryBoard\Dto\obj\Debug\net7.0\ref\Dto.dll

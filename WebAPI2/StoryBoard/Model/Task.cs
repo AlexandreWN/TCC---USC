@@ -1,6 +1,7 @@
 ﻿using Dto;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
+using System.Runtime.CompilerServices;
 
 namespace Model;
 
@@ -49,6 +50,18 @@ public class Task
             .ToListAsync();
 
         return projects;
+    }
+
+    public static async Task<Task> DeleteTaskAsync(TaskDeleteDto dto)
+    {
+        using var context = new Context();
+
+        var task = await context.Task.FirstAsync(x => x.Id == dto.Id);
+
+        context.Remove(task);
+        await context.SaveChangesAsync();
+
+        return task;
     }
 
     public async Task<Task> SaveAsync()

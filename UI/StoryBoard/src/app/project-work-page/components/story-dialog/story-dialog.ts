@@ -52,7 +52,6 @@ export class StoryDialogComponent implements OnInit{
       this.submitCommand.then(result => {
         if(result && result.length !== 0) {
           this.dialogRef.close();
-          alert("Story cadastrado com sucesso")
         }
       }).catch(error => {
         alert("Erro ao cadastrar Story "+error)

@@ -25,6 +25,7 @@ import { StoryListComponent } from './project-work-page/components/story-list/st
 import { SprintDialogComponent } from './project-work-page/components/sprint-dialog/sprint-dialog';
 import { StoryDialogComponent } from './project-work-page/components/story-dialog/story-dialog';
 import { TaskDialogComponent } from './project-work-page/components/task-dialog/task-dialog';
+import { ColaboradorDialogComponent } from './project-work-page/components/colaborador-dialog/colaborador-dialog';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { TaskDialogComponent } from './project-work-page/components/task-dialog/
     StoryListComponent,
     SprintDialogComponent, 
     StoryDialogComponent,
-    TaskDialogComponent
+    TaskDialogComponent,
+    ColaboradorDialogComponent
   ],
   imports: [
     BrowserModule,

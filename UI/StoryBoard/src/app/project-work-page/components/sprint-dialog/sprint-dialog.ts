@@ -49,7 +49,6 @@ export class SprintDialogComponent implements OnInit{
     this.submitCommand.then(result => {
       if(result && result.length !== 0) {
         this.dialogRef.close();
-        alert("Sprint cadastrado com sucesso")
       }
     }).catch(error => {
       alert("Erro ao cadastrar Sprint "+error)
