@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VYD0y73z8VfBSG792XQKlADPqqiwyDBx9E5mh2y4SR4jwfbsI3TOFjpAl40J6PgSKTFR1p1fLw9VgzZpm7wSWA==",
+  "dgSpecHash": "9tWPaOGDpmfdpdgNl4vWVqdQugUePXwkImDVJK6I1MTumQparCNDvjd1x06Qk5BtGPo/HcPLPtr7Nwe8TqR4jQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\alexa\\Desktop\\Repositorios\\TCC-USC\\WebAPI2\\StoryBoard\\Dto\\Dto.csproj",
+  "projectFilePath": "C:\\Users\\alexa\\Desktop\\TCC-USC\\WebAPI2\\StoryBoard\\Dto\\Dto.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\alexa\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\alexa\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
