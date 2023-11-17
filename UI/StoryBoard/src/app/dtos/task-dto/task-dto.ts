@@ -10,9 +10,11 @@ export class TaskDto {
 
     static createFromFormValues(formValues: any): TaskDto {
         const task = new TaskDto();
+        task.id = formValues.id;
         task.name = formValues.name;
         task.description = formValues.description;
         task.creationDate = formValues.creationDate;
+        // task.endDate = formValues.endDate;
         task.durationTime = formValues.durationTime;
         task.status = formValues.status;
         task.idStory = formValues.idStory;

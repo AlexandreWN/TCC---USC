@@ -23,8 +23,22 @@
             class="example-list"
             (cdkDropListDropped)="drop($event)">
             <div class="example-box" *ngFor="let item of todo" cdkDrag>
-                {{item.name}}
-                <mat-icon class="delete" (click)="delete(item.id)">delete</mat-icon>
+                <div class="d-flex flex-row justify-content-between">
+                    <span><strong>{{item.name}}</strong></span>
+                    <mat-icon class="delete" [matMenuTriggerFor]="menut">more_vert</mat-icon>
+
+                    <mat-menu #menut="matMenu">
+                        <button mat-menu-item (click)="openEditTask(item)">
+                          <mat-icon>edit</mat-icon>
+                          <span>Editar</span>
+                        </button>
+                        <button mat-menu-item (click)="delete(item.id)">
+                          <mat-icon>delete</mat-icon>
+                          <span>Deletar</span>
+                        </button>
+                    </mat-menu>
+                </div>
+                <span>{{item.durationTime}}h</span>
             </div>
         </div>
     </div>
@@ -41,8 +55,22 @@
             class="example-list"
             (cdkDropListDropped)="drop($event)">
             <div class="example-box" *ngFor="let item of inProgress" cdkDrag>
-                {{item.name}}
-                <mat-icon class="delete" (click)="delete(item.id)">delete</mat-icon>
+                <div class="d-flex flex-row justify-content-between">
+                    <span><strong>{{item.name}}</strong></span>
+                    <mat-icon class="delete" [matMenuTriggerFor]="menui">more_vert</mat-icon>
+
+                    <mat-menu #menui="matMenu">
+                        <button mat-menu-item (click)="openEditTask(item)">
+                          <mat-icon>edit</mat-icon>
+                          <span>Editar</span>
+                        </button>
+                        <button mat-menu-item (click)="delete(item.id)">
+                          <mat-icon>delete</mat-icon>
+                          <span>Deletar</span>
+                        </button>
+                    </mat-menu>
+                </div>
+                <span>{{item.durationTime}}h</span>
             </div>
         </div>
     </div>
@@ -59,8 +87,23 @@
             class="example-list"
             (cdkDropListDropped)="drop($event)">
             <div class="example-box" *ngFor="let item of done" cdkDrag>
-                {{item.name}}
-                <mat-icon class="delete" (click)="delete(item.id)">delete</mat-icon>
+                <div class="d-flex flex-row justify-content-between bold">
+                    <span><strong>{{item.name}}</strong></span>
+                    <mat-icon class="delete" [matMenuTriggerFor]="menud">more_vert</mat-icon>
+
+                    <mat-menu #menud="matMenu">
+                        <button mat-menu-item (click)="openEditTask(item)">
+                          <mat-icon>edit</mat-icon>
+                          <span>Editar</span>
+                        </button>
+                        <button mat-menu-item (click)="delete(item.id)">
+                          <mat-icon>delete</mat-icon>
+                          <span>Deletar</span>
+                        </button>
+                    </mat-menu>
+                </div>
+                <!-- (click)="delete(item.id)" -->
+                <span>{{item.durationTime}}h</span>
             </div>
         </div>
     </div>

@@ -26,6 +26,8 @@ import { SprintDialogComponent } from './project-work-page/components/sprint-dia
 import { StoryDialogComponent } from './project-work-page/components/story-dialog/story-dialog';
 import { TaskDialogComponent } from './project-work-page/components/task-dialog/task-dialog';
 import { ColaboradorDialogComponent } from './project-work-page/components/colaborador-dialog/colaborador-dialog';
+import {MatMenuModule} from '@angular/material/menu';
+import { SprintStatusDashComponent } from './project-work-page/components/sprint-status-dash/sprint-status-dash';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,8 @@ import { ColaboradorDialogComponent } from './project-work-page/components/colab
     SprintDialogComponent, 
     StoryDialogComponent,
     TaskDialogComponent,
-    ColaboradorDialogComponent
+    ColaboradorDialogComponent,
+    SprintStatusDashComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,8 @@ import { ColaboradorDialogComponent } from './project-work-page/components/colab
     MatExpansionModule,
     MatIconModule,
     DragDropModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    MatMenuModule
   ],
   exports: [
     MatDialogModule,
@@ -65,7 +69,8 @@ import { ColaboradorDialogComponent } from './project-work-page/components/colab
     MatExpansionModule,
     MatIconModule,
     DragDropModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

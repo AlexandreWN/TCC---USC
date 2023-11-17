@@ -34,6 +34,10 @@ export class StoryListComponent {
   }
 
   async ngOnInit() {
+    this.getTasks();
+  }
+
+  async getTasks(){
     this.queryCommandTask = AxiosEndpoint.task.getTaskByStoryId(this.Entity.id)
     try {
       const result = await this.queryCommandTask;
@@ -56,7 +60,12 @@ export class StoryListComponent {
         event.currentIndex,
       );
       let task = event.container.data[event.currentIndex];
-      task.status =  event.container.id;
+      task.status = event.container.id;
+      if (event.container.id === 'done') {
+        const currentDate = new Date();
+        currentDate.setHours(currentDate.getHours() - 3);
+        task.endDate = currentDate;
+      }
       this.updateCommand =  AxiosEndpoint.task.update(task)
       console.log("Objeto movido:", event.container.data[event.currentIndex]);
       console.log("Lista de destino:", event.container.id);
@@ -64,7 +73,12 @@ export class StoryListComponent {
   }
 
   openDialogTask(): void {
-    const dialogRef = this.dialog.open(TaskDialogComponent, {data: this.Entity.id});
+    const dialogRef = this.dialog.open(TaskDialogComponent, {
+      data: {
+        storyID: this.Entity.id,
+        task: null
+      }
+    });
 
     dialogRef.afterClosed().subscribe(async result => {
       this.queryCommandTask = AxiosEndpoint.task.getTaskByStoryId(this.Entity.id)
@@ -79,13 +93,27 @@ export class StoryListComponent {
     });
   }
 
+  openEditTask(task: TaskDto): void {
+    const dialogRef = this.dialog.open(TaskDialogComponent, {
+        data: {
+          storyID: this.Entity.id,
+          task: task
+        }
+      });
+
+    dialogRef.afterClosed().subscribe(result => {
+      // this.queryCommandTask = AxiosEndpoint.task.getTaskByStoryId(this.Entity.id);
+      window.location.reload();
+    });
+  }
+
   async delete(id : number) {
-    this.deleteCommand = AxiosEndpoint.task.delete(id);
+    this.deleteCommand = await AxiosEndpoint.task.delete(id);
     window.location.reload();
   }
 
-  deleteStory() {
-    this.deleteStoryCommand = AxiosEndpoint.story.delete(this.Entity.id);
+  async deleteStory() {
+    this.deleteStoryCommand = await AxiosEndpoint.story.delete(this.Entity.id);
     window.location.reload();
   }
 

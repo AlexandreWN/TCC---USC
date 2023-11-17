@@ -1,5 +1,5 @@
 import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/drag-drop';
-import { Component } from '@angular/core';
+import { Component, QueryList, ViewChildren } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { SprintDialogComponent } from './components/sprint-dialog/sprint-dialog';
 import { StoryDialogComponent } from './components/story-dialog/story-dialog';
@@ -7,6 +7,8 @@ import { TaskDialogComponent } from './components/task-dialog/task-dialog';
 import { ActivatedRoute, Router } from '@angular/router';
 import { AxiosEndpoint } from '../utils/query-services';
 import { ColaboradorDialogComponent } from './components/colaborador-dialog/colaborador-dialog';
+import { MatExpansionPanel } from '@angular/material/expansion';
+import { SprintStatusDashComponent } from './components/sprint-status-dash/sprint-status-dash';
 
 @Component({
   selector: 'app-project-work-page',
@@ -27,7 +29,7 @@ export class ProjectWorkPageComponent {
   queryCommandStory!: Promise<any>;
   queryCommandTask!: Promise<any>;
   selectedOption: string = "";
-
+  
   constructor(
     private readonly dialog: MatDialog
     , private route: ActivatedRoute
@@ -87,7 +89,12 @@ export class ProjectWorkPageComponent {
   }
 
   openDialogTask(): void {
-    const dialogRef = this.dialog.open(TaskDialogComponent, {data: this.storyID});
+    const dialogRef = this.dialog.open(TaskDialogComponent, {
+        data: {
+          storyID: this.storyID,
+          task: null
+        }
+      });
 
     dialogRef.afterClosed().subscribe(result => {
       this.queryCommandTask = AxiosEndpoint.task.getTaskByStoryId(this.storyID)
@@ -109,5 +116,10 @@ export class ProjectWorkPageComponent {
     });
   }
 
+  openDash(): void {
+    const dialogRef = this.dialog.open(SprintStatusDashComponent, {data: this.sprintId});
 
+    dialogRef.afterClosed().subscribe(result => {
+    });
+  }
 }

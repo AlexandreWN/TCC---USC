@@ -7,7 +7,8 @@ import { StoryDto } from '../dtos/story-dto/story-dto';
 import { TaskDto } from '../dtos/task-dto/task-dto';
 import { TeamDto } from '../dtos/user-dto/team-dto';
 
-export const MainApiBaseRoute ='https://storyboardapi.azurewebsites.net';
+//export const MainApiBaseRoute ='https://storyboardapi.azurewebsites.net';
+export const MainApiBaseRoute ='https://localhost:7086';
 
 export const EndpointUrl = {
   userProject: {
@@ -16,14 +17,17 @@ export const EndpointUrl = {
     registerTeam: () => `${MainApiBaseRoute}/UserProject/registerTeam`
     //update: (id:  number)  =>  `${MainApiBaseRoute}/User/Update/${id}`
   },
+
   project: {
     getById: (id: number) => `${MainApiBaseRoute}/Project/getProjectLikeId/${id}`,
     register: () => `${MainApiBaseRoute}/Project/register`,
   },
+
   sprint: {
     register: () => `${MainApiBaseRoute}/Sprint/register`,
     getSprintLikeProjectId: (id:  number) =>  `${MainApiBaseRoute}/Sprint/getSprintLikeProjectId/${id}`
   },
+
   story: {
     register: () => `${MainApiBaseRoute}/Story/register`,
     getStoryBySprintId: (id: number) => `${MainApiBaseRoute}/Story/getStoryBySprintId/${id}`,
@@ -41,9 +45,14 @@ export const EndpointUrl = {
     login: () => `${MainApiBaseRoute}/User/login`,
     register: () => `${MainApiBaseRoute}/User/register`,
   },
+
+  dash: {
+    getSprintStatusAsync: (id: number) =>  `${MainApiBaseRoute}/Dash/SprintPerformance/${id}`
+  }
 }
 
 export const AxiosEndpoint = {
+  //This service is responsible for constructing the object and calling the endpoint method of UserProject
   userProject: {
     getAllByUserId:async (id : number, userType: string): Promise<Array<any>> => {
       let response = await axios.get(EndpointUrl.userProject.getAllByUserId(id, userType));
@@ -71,6 +80,7 @@ export const AxiosEndpoint = {
     }
   },
 
+  //This service is responsible for constructing the object and calling the endpoint method of Project
   project: {
     getById:async (id : number): Promise<Array<any>> => {
       let response = await axios.get(EndpointUrl.project.getById(id));
@@ -88,10 +98,25 @@ export const AxiosEndpoint = {
     }
   },
 
+  dash: {
+    getSprintStatusAsync:async (id: number): Promise<Array<any>> => {
+      let response = await axios.get(EndpointUrl.dash.getSprintStatusAsync(id));
+      return response.data;
+    },
+  },
+
+  //This service is responsible for constructing the object and calling the endpoint method of Sprint
   sprint: {
     getSprintLikeProjectId:async (id: number): Promise<Array<any>> => {
       let response = await axios.get(EndpointUrl.sprint.getSprintLikeProjectId(id));
       return response.data;
+    },
+    submit(sprint:  SprintDto) {
+      if (sprint.id == 0){
+        this.register(sprint);
+      }else {
+        // this.update(sprint);
+      }
     },
     register:async (sprint: SprintDto) => {
       const requestBody = {
@@ -104,9 +129,10 @@ export const AxiosEndpoint = {
       };
       let response = await axios.post(EndpointUrl.sprint.register(), requestBody);
       return response.data;
-    }
+    },
   },
 
+  //This service is responsible for constructing the object and calling the endpoint method of Story
   story: {
     getStoryBySprintId:async (id: number): Promise<Array<any>> => {
       let response = await axios.get(EndpointUrl.story.getStoryBySprintId(id));
@@ -129,7 +155,15 @@ export const AxiosEndpoint = {
     }
   },
 
+  //This service is responsible for constructing the object and calling the endpoint method of Task
   task: {
+    submit(task: TaskDto): Promise<any> {
+      if (task.id == 0) {
+        return this.register(task);
+      } else {
+        return this.update(task);
+      }
+    },
     getTaskByStoryId:async (id: number): Promise<Array<any>> => {
       let response = await axios.get(EndpointUrl.task.getTaskByStoryId(id));
       return response.data;
@@ -151,11 +185,14 @@ export const AxiosEndpoint = {
       return response.data;
     },
     delete:async (id: number) => {
+      console.log(id)
       const requestBody = { id: id };
       let response = await axios.post(EndpointUrl.task.delete(), requestBody);
       return response.data;
     }
   },
+
+  //This service is responsible for constructing the object and calling the endpoint method of User
   user: {
     login:async (login: string, password: string): Promise<Array<any>> => {
       const requestBody = {
