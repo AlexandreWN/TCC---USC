@@ -45,6 +45,7 @@
 
 .sobre{
     padding-top: 150px;
+    margin-bottom: -5px;
     font-weight: bold; 
     color: black;
     font-family:'Trebuchet MS';
@@ -58,19 +59,20 @@
 }
 
 .subtitle{
-    margin-bottom: -20px;
+    margin-bottom: -40px;
     display: flex;
     flex-direction: row;
     font-weight: bold;
     color: black;
     text-align: left;
+    padding-left: 20px;
     padding-top: 4em;   
 }
 .subtitle_right{
     display: flex;
     flex-direction: row-reverse;
     margin-bottom: -20px;
-    margin-right: 285px;
+    margin-right: 257px;
     font-weight: bold;
     color: black;
     text-align: left;
