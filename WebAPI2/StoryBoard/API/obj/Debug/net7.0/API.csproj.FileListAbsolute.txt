@@ -312,3 +312,13 @@ C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Debug\net7.0\refint\AP
 C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Debug\net7.0\API.pdb
 C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Debug\net7.0\API.genruntimeconfig.cache
 C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Debug\net7.0\ref\API.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Debug\net7.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Debug\net7.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Debug\net7.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Debug\net7.0\Microsoft.Extensions.Features.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Debug\net7.0\Microsoft.Extensions.Options.dll

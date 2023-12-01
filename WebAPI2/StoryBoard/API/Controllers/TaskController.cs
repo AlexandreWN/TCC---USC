@@ -1,6 +1,8 @@
 ﻿using Dto;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.SignalR;
 using Model;
+using Model.Hubs;
 
 namespace API.Controllers;
 
@@ -8,6 +10,13 @@ namespace API.Controllers;
 [Route("[controller]")]
 public class TaskController : ControllerBase
 {
+    private readonly IHubContext<TaskHub> hubContext;
+
+    public TaskController(IHubContext<TaskHub> hubContext)
+    {
+        this.hubContext = hubContext;
+    }
+
     [HttpPost]
     [Route("register")]
     public async Task<IActionResult> RegisterStory([FromBody] TaskDto dto)
@@ -15,6 +24,8 @@ public class TaskController : ControllerBase
         var task = await Model.Task
             .Create(dto)
             .SaveAsync();
+
+        await hubContext.Clients.All.SendAsync("TaskRegistered", task);
 
         return Ok(task);
     }

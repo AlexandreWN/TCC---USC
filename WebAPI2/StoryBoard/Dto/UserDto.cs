@@ -12,6 +12,7 @@ public class UserDto
     public string Name { get; set; }
     public string Login { get; set; }
     public string Password { get; set; }
+    public string? Salt { get; set; }
     public bool Active { get; set; }
     public bool Adm { get; set; }
 }

@@ -32,6 +32,7 @@ namespace Model
                 entity.Property(us => us.Password);
                 entity.Property(us => us.Active);
                 entity.Property(us => us.Adm);
+                entity.Property(us => us.Salt);
             });
 
             modelBuilder.Entity<Project>(entity =>

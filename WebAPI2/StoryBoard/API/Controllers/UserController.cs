@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Dto;
+using Model;
 
 namespace Controllers;
 
@@ -23,7 +24,7 @@ public class UserController : ControllerBase
     public async Task<IActionResult> GetUsuario([FromBody] LoginDto dto)
     {
         var usuario = await Model.User
-            .GetUserAsync(u => u.Login == dto.Login && u.Password == dto.Password);
+            .GetUserAsync(dto);
 
         return Ok(usuario);
     }

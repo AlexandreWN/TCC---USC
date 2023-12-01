@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 
 using Dto;
 using Microsoft.EntityFrameworkCore;
+using Model.EncodeDecode.IService;
+using Model.EncodeDecode.Service;
 
 namespace Model;
 
@@ -19,41 +21,50 @@ public class User
     public string Password { get; private set; }
     public bool Active { get; private set; }
     public bool Adm { get; private set; }
+    public string Salt { get; private set; }
     
     public User()
     {
-
     }
 
-    public User(string name, string login, string password, bool active, bool adm)
+    public User(string name, string login, string password, bool active, bool adm, string salt)
     {
         this.Name = name;
         this.Login = login;
         this.Password = password;
         this.Active = active;
         this.Adm = adm;
+        this.Salt = salt;
     }
 
-    public static User Create(string Name, string Login, string Password, bool Active, bool Adm)
+    public static User Create(string Name, string Login, string Password, bool Active, bool Adm, string Salt)
     {
-        var usuario = new User(Name, Login, Password, Active, Adm);
+        var usuario = new User(Name, Login, Password, Active, Adm, Salt);
 
         return usuario;
     }
 
     public static User Create(UserDto dto)
     {
-        var usuario = new User(dto.Name, dto.Login, dto.Password, dto.Active, dto.Adm);
+        var encodeDecodeService = new EncodeDecodeService();
+        
+        var user = encodeDecodeService.GenerateHashedUser(dto);
 
-        return usuario;
+        var userHashed = new User(user.Name, user.Login, user.Password, user.Active, user.Adm, user.Salt);
+
+        return userHashed;
     }
 
-    public static async Task<User> GetUserAsync(Expression<Func<User, bool>> filter)
+    public static async Task<User> GetUserAsync(LoginDto dto)
     {
         using var context = new Context();
 
-        var user = await context.User
-            .FirstAsync(filter);
+        var encodeDecodeService = new EncodeDecodeService();
+
+        var users = await context.User
+            .Where(x => x.Login == dto.Login).ToListAsync();
+
+        var user = users.Where(x => encodeDecodeService.VerifyPassword(dto.Password, x.Salt, x.Password) == true).First();
 
         return user;
     }

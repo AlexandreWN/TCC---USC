@@ -1,3 +1,5 @@
+using Model.Hubs;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -12,22 +14,30 @@ builder.Services.AddCors(p => p.AddPolicy("corsapp", builder =>
     builder.WithOrigins("*").AllowAnyMethod().AllowAnyHeader();
 }));
 
+builder.Services.AddSignalR();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Configure the HTTP request pipeline.n-
 if (app.Environment.IsDevelopment())
 {
 }
-    app.UseSwagger();
-    app.UseSwaggerUI();
+
+app.UseRouting();
 
 app.UseCors("corsapp");
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.MapControllers();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapHub<TaskHub>("/task-hub");
+    endpoints.MapControllers();
+});
 
 app.Run();
