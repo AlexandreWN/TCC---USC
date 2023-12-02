@@ -1,22 +1,24 @@
-  <h1 mat-dialog-title class="title">LOGIN</h1>
-
-  <div mat-dialog-content class="container" [formGroup]="mainForm">
-    <p class="Email">
-      <mat-label>Email</mat-label>
-    </p>
-    <input matInput #login formControlName="login" id="Email">
- 
-    <p class="Password">
-      <mat-label>Password</mat-label>
-    </p>
-    <input matInput type="password" #password formControlName="password" id="Password">
-  </div>
-
-  <div mat-dialog-actions class="buttonContainer">
-    <button mat-button cdkFocusInitial class="button" [ngClass]="{ 'disabled-style': !this.mainForm.valid }" [disabled]="!this.mainForm.valid" (click)="submitLogin()">SUBMIT</button>
-  </div>
-
   <div>
-    <p class = "Login-singUp">don't have an account?<button class="link_up"(click)="openDialogRegister()"><a>Sing Up</a></button></p>
-  </div>
+    <h1 mat-dialog-title class="title">LOGIN</h1>
   
+    <div mat-dialog-content class="container" [formGroup]="mainForm">
+      <p class="Email">
+        <mat-label>Email</mat-label>
+      </p>
+      <input matInput #login formControlName="login" id="Email">
+   
+      <p class="Password">
+        <mat-label>Password</mat-label>
+      </p>
+      <input matInput type="password" #password formControlName="password" id="Password">
+    </div>
+  
+    <div mat-dialog-actions class="buttonContainer">
+      <button mat-button cdkFocusInitial class="button" [ngClass]="{ 'disabled-style': !this.mainForm.valid }" [disabled]="!this.mainForm.valid" (click)="submitLogin()">SUBMIT</button>
+    </div>
+  
+    <div>
+      <p class = "Login-singUp">don't have an account?<button class="link_up"(click)="openDialogRegister()"><a>Sing Up</a></button></p>
+    </div>
+    
+  </div>

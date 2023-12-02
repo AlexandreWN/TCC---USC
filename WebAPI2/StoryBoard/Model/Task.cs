@@ -104,6 +104,10 @@ public class Task
             if (dto.DurationTime != taskDb.DurationTime) taskDb.DurationTime = dto.DurationTime;
             if (dto.Status != taskDb.Status) taskDb.Status = dto.Status;
 
+            if (dto.Status != "done")
+            {
+                taskDb.EndDate = default;
+            }
             await context.SaveChangesAsync();
             await transaction.CommitAsync();
 
