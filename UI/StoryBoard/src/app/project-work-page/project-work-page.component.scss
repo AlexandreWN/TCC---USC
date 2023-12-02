@@ -1,96 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .buttonTop {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: end;
+    font-family: 'Trebuchet MS';
+    justify-content: space-between;
+    gap: 1rem;
 
     button {
-      border-radius: 5px;
-      border: none;
-      height: 4em;
-      width: 2rem,;
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      color: rgb(0, 0, 0);
-      margin-right: 2em;
-      
-    }
-
-    .buttonfirst {
-        margin-left: 1em;
-    }
-
-    .selector {
-      height: 5em;
-    }
-
-    .task{
-        margin-left: -1em;
-    }
-
-}
-
-.itensRows {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.rows {
-    display: flex;
-    flex-direction: column;
-    margin-right: 4em;
-    margin-left: 4em;
-
-    .title {
-        font-weight: bold;
-        font-size: 1.5em;
-        color: black;
-    }
-}
-
-.rowContent {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.itemContainer {
-    display: flex;
-    flex-direction: column;
-    border-radius: 10px;
-
-    p {
-        font-weight: 510;
+        border-radius: 5px;
+        border: none;
+        height: 4em;
+        width: 2rem, ;
         text-align: center;
-        margin-top: 20px;
-        color: black;
+        justify-content: center;
+        align-items: center;
+        color: rgb(0, 0, 0);
+
+    }
+
+    .options {
+        gap:1rem;
     }
 }
 
-.content {
-    margin-bottom: 5px;
+.options {
     display: flex;
-    margin-right: 4em;
-    margin-left: 4em;
-    flex-direction: column;
+}
 
-    .panel {
-      width: 100%;
-      background-color: #f8f9fa;
-    }
+.title {
+    padding: .8rem 0 0 0;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0;
+}
 
-    .panel:nth-child(n + 2) {
-      margin-top: 10px;
+@media only screen and (max-width: 767px) {
+    .buttonTop {
+        flex-direction: column;
     }
 }
 
-.example-container {
-    width: 30%;
-    max-width: 100%;
-    margin: 0 25px 25px 0;
-    display: inline-block;
-    vertical-align: top;
-}
-  
-  
+// .buttonTop {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: end;
+
+//     button {
+//       border-radius: 5px;
+//       border: none;
+//       height: 4em;
+//       width: 2rem,;
+//       text-align: center;
+//       justify-content: center;
+//       align-items: center;
+//       color: rgb(0, 0, 0);
+
+//     }
+
+//     .buttonfirst {
+//         margin-left: 1em;
+//     }
+
+//     .selector {
+//       height: 5em;
+//     }
+
+//     .task{
+//         margin-left: -1em;
+//     }
+
+// }
+
+// .itensRows {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+// }
+
+// .rows {
+//     display: flex;
+//     flex-direction: column;
+//     margin-right: 4em;
+//     margin-left: 4em;
+
+//     .title {
+//         font-weight: bold;
+//         font-size: 1.5em;
+//         color: black;
+//     }
+// }
+
+// .rowContent {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+// }
+
+// .itemContainer {
+//     display: flex;
+//     flex-direction: column;
+//     border-radius: 10px;
+
+//     p {
+//         font-weight: 510;
+//         text-align: center;
+//         margin-top: 20px;
+//         color: black;
+//     }
+// }
+
+// .content {
+//     margin-bottom: 5px;
+//     display: flex;
+//     margin-right: 4em;
+//     margin-left: 4em;
+//     flex-direction: column;
+
+//     .panel {
+//       width: 100%;
+//       background-color: #f8f9fa;
+//     }
+
+//     .panel:nth-child(n + 2) {
+//       margin-top: 10px;
+//     }
+// }
+
+// .example-container {
+//     width: 30%;
+//     max-width: 100%;
+//     margin: 0 25px 25px 0;
+//     display: inline-block;
+//     vertical-align: top;
+// }

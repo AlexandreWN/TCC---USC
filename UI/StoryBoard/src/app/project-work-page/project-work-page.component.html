@@ -1,44 +1,47 @@
-<nav>
-    <div class="itensRows">
-        <div class="rows">
-            <p class="title">{{(queryCommandProject | async)?.name}}</p>
-        </div>
-        <div class="buttonTop">
-            <mat-form-field class="selector">
-                <mat-label>Selecione a sprint</mat-label>
-                <mat-select [(ngModel)]="selectedOption" (selectionChange)="onOptionSelected($event.value)">
-                    <ng-container *ngIf="(queryCommandSprint | async)?.length !== 0">
-                      <mat-option *ngFor="let sprint of queryCommandSprint | async" [value]="sprint.id">{{sprint.name}}</mat-option>
-                    </ng-container>
-                    <mat-option (click)="openDialogSprint()">Adicionar Sprint</mat-option>
-                </mat-select>
-            </mat-form-field>
-            <!-- <button (click)="openDialogStory()" *ngIf="sprintId !== undefined" class="buttonfirst"><a>Adicionar Story</a></button>
+<div class="buttonTop">
+  <p class="title">{{(queryCommandProject | async)?.name}}</p>
+  <div class="options">
+    <mat-form-field class="selector">
+      <mat-label>Selecione a sprint</mat-label>
+      <mat-select [(ngModel)]="selectedOption" (selectionChange)="onOptionSelected($event.value)">
+        <ng-container *ngIf="(queryCommandSprint | async)?.length !== 0">
+          <mat-option *ngFor="let sprint of queryCommandSprint | async" [value]="sprint.id">{{sprint.name}}</mat-option>
+        </ng-container>
+        <mat-option (click)="openDialogSprint()">Adicionar Sprint</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <!-- <button (click)="openDialogStory()" *ngIf="sprintId !== undefined" class="buttonfirst"><a>Adicionar Story</a></button>
             <button (click)="openDialogColaborador()" *ngIf="sprintId !== undefined"><a>Adicionar Membro</a></button> -->
 
-            <button class="buttonfirst" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
-                <mat-icon>more_vert</mat-icon>
-              </button>
-              <mat-menu #menu="matMenu">
-                <button mat-menu-item (click)="openDialogStory()">
-                  <mat-icon>history</mat-icon>
-                  <span>Adicionar Story</span>
-                </button>
-                <button mat-menu-item (click)="openDialogColaborador()">
-                  <mat-icon>person</mat-icon>
-                  <span>Adicionar Colaborador</span>
-                </button>
-                <button mat-menu-item (click)="openDash()">
-                  <mat-icon>line_axis</mat-icon>
-                  <span>Dashboard</span>
-                </button>
-              </mat-menu>
-        </div>
-    </div>
-    
-    <div class="content" *ngFor="let story of queryCommandStory | async">
-        <app-story-list [Entity]="story"></app-story-list>
-    </div>
+    <button class="buttonfirst" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+      <mat-icon>more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="openDialogStory()">
+        <mat-icon>history</mat-icon>
+        <span>Adicionar Story</span>
+      </button>
+      <button mat-menu-item (click)="openDialogColaborador()">
+        <mat-icon>person</mat-icon>
+        <span>Adicionar Colaborador</span>
+      </button>
+      <button mat-menu-item (click)="openDash()">
+        <mat-icon>line_axis</mat-icon>
+        <span>Dashboard</span>
+      </button>
+    </mat-menu>
+  </div>
+</div>
 
-    <!-- <app-sprint-status-dash></app-sprint-status-dash> -->
-</nav>
+<div class="itensRows">
+  <div class="rows">
+    
+  </div>
+  
+</div>
+
+<div class="content" *ngFor="let story of queryCommandStory | async">
+  <app-story-list [Entity]="story"></app-story-list>
+</div>
+
+<!-- <app-sprint-status-dash></app-sprint-status-dash> -->

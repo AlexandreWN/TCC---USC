@@ -86,3 +86,19 @@
 .delete{
   cursor: pointer;
 }
+
+.content {
+  display: flex;
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 700px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .example-container {
+    width: 100%;
+    max-width: 100%;
+  }
+}

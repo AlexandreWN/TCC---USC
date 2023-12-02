@@ -1,16 +1,14 @@
-<nav>
-    <div class="buttonTop">
-        <button (click)="openDialog()"><a>Adicionar Projeto</a></button>
-    </div>
+<div class="buttonTop">
+    <p class="title">Seus projetos</p>
+    <button (click)="openDialog()"><a>Adicionar Projeto</a></button>
+</div>
+<div class="container">
     <div class="itensRows">
         <div class="rows">
-            <p class="title">Seus projetos</p>
             <div class="rowContent">
                 <ng-container *ngIf="(queryCommandProjects | async)?.length !== 0">
                     <div class="itemContainer" *ngFor="let proj of queryCommandProjects | async" (click)="GoToProject(proj.project.id)">
-                        <div class="imgItem">
-                            <img src="{{proj.project.urlImage}}">
-                        </div>
+                        <img class="project-image" src="{{proj.project.urlImage}}">
                         <p>{{proj.project.name}}</p>
                     </div>
                 </ng-container>
@@ -24,6 +22,11 @@
                 </ng-container>
             </div>
         </div>
+    </div>
+</div>
+    <!-- 
+    <div class="itensRows">
+        
 
         <div class="rows">
             <p class="title">Seus projetos em time</p>
@@ -40,5 +43,4 @@
                 <p>PARECE QUE VOCE NÃO TEM AMIGOS :,(</p>
             </ng-container>
         </div>
-    </div>
-</nav>
+    </div> -->

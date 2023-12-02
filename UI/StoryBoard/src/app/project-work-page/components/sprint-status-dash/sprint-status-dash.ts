@@ -109,7 +109,9 @@ export class SprintStatusDashComponent implements OnDestroy {
             type: 'linear',
             position: 'left'
           }
-        }
+        },
+        responsive: true,
+        maintainAspectRatio: false,
       }
     });
   }

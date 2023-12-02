@@ -1,7 +1,8 @@
 .container{
     display: flex;
     flex-direction: column;
-    width: 400px;
+    width: 70vw;
+    max-width: 400px;
     font-family:'Times New Roman';
 }
 
@@ -11,6 +12,7 @@
     justify-content: center;
     margin-top: 2em;
     font-family:'Times New Roman';
+    text-align: center;
 }
 
 .Name{
@@ -23,11 +25,14 @@
 .buttonContainer{
     display: flex;
     flex-direction: row;
-    justify-content: left;
-    margin-left: 1.2em;
-    padding-top: 3em;
-    padding-bottom: 2.5em;
-    font-family:'Times New Roman';
+    gap:1rem;
+    padding-left: 1.5rem;
+}
+
+.disabled-style {
+    opacity: 0.1;
+    background-color: rgb(126, 126, 126);
+    cursor: not-allowed;
 }
 
 .button{
@@ -35,27 +40,7 @@
     border-radius: 5px;
     width: 80px;
     height: 40px;
-    justify-content: right;
-    margin-right: 13.5em;
     color: rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
-    
-}
-
-.buttonSubmit{
-    border: 0;
-    border-radius: 5px;
-    width: 80px;
-    height: 40px;
-    
-    color: rgb(255, 255, 255);
-    background-color: rgb(0, 0, 0);
-    font-family:'Times New Roman';
-    
-}
-
-.disabled-style {
-    opacity: 0.1;
-    background-color: rgb(126, 126, 126);
-    cursor: not-allowed;
+    font-family: 'Times New Roman';
 }

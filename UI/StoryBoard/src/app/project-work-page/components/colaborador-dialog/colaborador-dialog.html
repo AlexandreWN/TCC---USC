@@ -3,7 +3,12 @@
   <mat-label class="Name">Email</mat-label>
   <input matInput type="email" #description formControlName="userEmail" id="description">
 </div>
-<div mat-dialog-actions class="buttonContainer">
+<!-- <div mat-dialog-actions class="">
   <button mat-button cdkFocusInitial class="button" (click)="onNoClick()">Cancel</button>
   <button mat-button [ngClass]="{ 'disabled-style': !this.mainForm.valid }" [disabled]="!this.mainForm.valid" cdkFocusInitial class="buttonSubmit" (click)="submitRegister()">Submit</button>
+</div> -->
+
+<div class="buttonContainer">
+  <button (click)="onNoClick()" class="button"><a>Cancelar</a></button>
+  <button [ngClass]="{ 'disabled-style': !this.mainForm.valid }" [disabled]="!this.mainForm.valid" class="button" (click)="submitRegister()"><a>Enviar</a></button>
 </div>

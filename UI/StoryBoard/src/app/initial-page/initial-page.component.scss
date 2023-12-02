@@ -1,81 +1,159 @@
-.buttonTop{
+* {
+    margin: 0;
+    padding: 0;
+    font-family:'Trebuchet MS';
+    padding: 0 0 1rem 0;
+}
+
+.container {
     display: flex;
-    flex-direction: row;
-    justify-content: end;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+
+.buttonTop{
+    width: 100%;
+    display: flex;
+    font-family:'Trebuchet MS';
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
     button{
-        background-color: #404040;
+        padding: 0;
+        background-color: #1e1a3a;
         border-radius: 5px;
         border: none;
-        height: 4em;
+        height: 3em;
         width: 9em;
         text-align: center;
         justify-content: center;
         align-items: center;
-        color: white;
-        margin-right: 4em;
+        color: rgb(255, 255, 255);
     }
 }
 
-.itensRows{
-    display: flex;
-    flex-direction: column;
-}
-
-.rows{
-    display: flex;
-    flex-direction: column;
-    margin-left: 4em;
-    margin-right: 4em;
-    .title{
-        font-weight: bold;
-        font-size: 1.5em;
-        color: black;
-    }
-}
-
-.rows:nth-child(n + 2){
-    margin-top: 20px;
-}
-
-.rowContent{
+.rowContent {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-auto-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 1fr;
+    gap: 20px;
+    padding: 0px;
 }
 
-.itemContainer{
+.itemContainer {
+    background-color: #1e1a3a;
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
     display: flex;
+    justify-content: space-between;
     flex-direction: column;
-    border-radius: 5px;
-    padding: 0.5em;
-    width: 215px;
-    height: 200px;
-    p{
-        font-weight: 510;
-        text-align: center;
-        margin-top: 20px;
-        color: black;
+    gap:2rem;
+    font-size: 1rem;
+    font-weight: bold;
+
+    .project-image{
+        width: 100%;
+        aspect-ratio: 16/9;
+        object-fit: cover;
+        
     }
 }
 
-.itemContainer:hover{
+.rowContent :hover {
     cursor: pointer;
-    background-color: rgb(77, 77, 77);
+    background-color: #2f2953;
 }
 
-.imgItem{
-    margin-top: 10px;
-    background-color: rgb(192, 192, 192);
-    width: 200px;
-    height: 150px;
-
-    overflow: auto;
-    overflow-x: hidden;
-    overflow-y: hidden;
-
-    img{
-        max-height: 150px;
-        min-height: 150px;
-        min-width: 200px;
-    }
+.title {
+    padding: 0;
+    font-weight: bold;
+    font-size: 2rem;
+    margin: 0;
 }
+
+
+
+// .buttonTop{
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: end;
+//     button{
+//         background-color: #404040;
+//         border-radius: 5px;
+//         border: none;
+//         height: 4em;
+//         width: 9em;
+//         text-align: center;
+//         justify-content: center;
+//         align-items: center;
+//         color: white;
+//         margin-right: 4em;
+//     }
+// }
+
+// .itensRows{
+//     display: flex;
+//     flex-direction: column;
+// }
+
+// .rows{
+//     display: flex;
+//     flex-direction: column;
+//     margin-left: 4em;
+//     margin-right: 4em;
+//     .title{
+//         font-weight: bold;
+//         font-size: 1.5em;
+//         color: black;
+//     }
+// }
+
+// .rows:nth-child(n + 2){
+//     margin-top: 20px;
+// }
+
+// .rowContent{
+//     display: grid;
+//     grid-template-columns: 1fr 1fr 1fr 1fr;
+//     grid-auto-rows: auto;
+// }
+
+// .itemContainer{
+//     display: flex;
+//     flex-direction: column;
+//     border-radius: 5px;
+//     padding: 0.5em;
+//     width: 215px;
+//     height: 200px;
+//     p{
+//         font-weight: 510;
+//         text-align: center;
+//         margin-top: 20px;
+//         color: black;
+//     }
+// }
+
+// .itemContainer:hover{
+//     cursor: pointer;
+//     background-color: rgb(77, 77, 77);
+// }
+
+// .imgItem{
+//     margin-top: 10px;
+//     background-color: rgb(192, 192, 192);
+//     width: 200px;
+//     height: 150px;
+
+//     overflow: auto;
+//     overflow-x: hidden;
+//     overflow-y: hidden;
+
+//     img{
+//         max-height: 150px;
+//         min-height: 150px;
+//         min-width: 200px;
+//     }
+// }
