@@ -57,8 +57,6 @@ export class ProjectWorkPageComponent {
   name!: string;
   animal!: string;
 
-
-
   openDialogSprint(): void {
     const dialogRef = this.dialog.open(SprintDialogComponent, 
       {data: this.projectId}

@@ -156,3 +156,13 @@ C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Release\net7.0\Humaniz
 C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Release\net7.0\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Release\net7.0\Mono.TextTemplating.dll
 C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Release\net7.0\System.CodeDom.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Release\net7.0\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Release\net7.0\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Release\net7.0\Microsoft.AspNetCore.Http.Connections.Common.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Release\net7.0\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Release\net7.0\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Release\net7.0\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Release\net7.0\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Release\net7.0\Microsoft.Extensions.Features.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Release\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\bin\Release\net7.0\Microsoft.Extensions.Options.dll

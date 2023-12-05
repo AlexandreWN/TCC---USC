@@ -6,7 +6,14 @@ C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\
 C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\API.pdb
 C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Azure.Core.dll
 C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Azure.Identity.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Microsoft.AspNetCore.Http.Connections.Common.dll
 C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Microsoft.AspNetCore.OpenApi.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Microsoft.AspNetCore.SignalR.Client.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Microsoft.AspNetCore.SignalR.Client.Core.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Microsoft.AspNetCore.SignalR.Protocols.Json.dll
 C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Microsoft.Data.SqlClient.dll
 C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Microsoft.EntityFrameworkCore.dll
@@ -14,6 +21,9 @@ C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\
 C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Microsoft.Extensions.DependencyModel.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Microsoft.Extensions.Features.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Microsoft.Extensions.Options.dll
 C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Microsoft.Identity.Client.dll
 C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Microsoft.Identity.Client.Extensions.Msal.dll
 C:\Users\alexa\Desktop\TCC-USC\WebAPI2\StoryBoard\API\obj\Release\net7.0\PubTmp\Out\Microsoft.IdentityModel.Abstractions.dll

@@ -112,7 +112,8 @@ export class StoryListComponent {
     window.location.reload();
   }
 
-  async deleteStory() {
+  async deleteStory(e:Event) {
+    e.stopPropagation()
     this.deleteStoryCommand = await AxiosEndpoint.story.delete(this.Entity.id);
     window.location.reload();
   }

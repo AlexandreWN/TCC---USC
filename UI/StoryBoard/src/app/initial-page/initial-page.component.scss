@@ -35,7 +35,7 @@
 
 .rowContent {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-auto-rows: 1fr;
     gap: 20px;
     padding: 0px;
@@ -50,15 +50,15 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    gap:2rem;
+    gap: 2rem;
     font-size: 1rem;
     font-weight: bold;
+    max-width: 300px;
 
     .project-image{
         width: 100%;
         aspect-ratio: 16/9;
         object-fit: cover;
-        
     }
 }
 

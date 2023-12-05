@@ -7,15 +7,13 @@ import { StoryDto } from '../dtos/story-dto/story-dto';
 import { TaskDto } from '../dtos/task-dto/task-dto';
 import { TeamDto } from '../dtos/user-dto/team-dto';
 
-// export const MainApiBaseRoute ='https://storyboardapi.azurewebsites.net';
-export const MainApiBaseRoute ='https://localhost:7086';
+export const MainApiBaseRoute ='https://storyboardapi.azurewebsites.net';
 
 export const EndpointUrl = {
   userProject: {
     getAllByUserId: (id: number, userType: string) => `${MainApiBaseRoute}/UserProject/getUserProjectsLikeUserId/${id}/${userType}`,
     register: () => `${MainApiBaseRoute}/UserProject/register`,
     registerTeam: () => `${MainApiBaseRoute}/UserProject/registerTeam`
-    //update: (id:  number)  =>  `${MainApiBaseRoute}/User/Update/${id}`
   },
 
   project: {
@@ -52,7 +50,6 @@ export const EndpointUrl = {
 }
 
 export const AxiosEndpoint = {
-  //This service is responsible for constructing the object and calling the endpoint method of UserProject
   userProject: {
     getAllByUserId:async (id : number, userType: string): Promise<Array<any>> => {
       let response = await axios.get(EndpointUrl.userProject.getAllByUserId(id, userType));
